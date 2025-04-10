@@ -1,0 +1,415 @@
+@charset "utf-8";
+@import url(guid.css);
+
+/* 共通の基本スタイル */
+header {
+    padding: 20px;
+}
+
+.head a {
+    text-decoration: none; /* リンクの下線を消す */
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding-right: 0;
+    overflow: hidden;
+    display: flex; /* 横並びにするため */
+}
+
+nav ul li {
+    width: 90px;
+    float: right;
+    text-align: center; /* メニューアイテムを中央揃え */
+}
+
+nav ul li a {
+    display: block;
+    height: 0;
+    padding-top: 44px;
+    overflow: hidden;
+}
+
+nav ul li#nav_home a {
+    background-image: url(../img/navi/nav1.png);
+}
+
+nav ul li#nav_about a {
+    background-image: url(../img/navi/nav2.png);
+}
+
+nav ul li#nav_contact a {
+    background-image: url(../img/navi/nav3.png);
+}
+
+#home #nav_home a, #about #nav_about a, #contact #nav_contact a, nav ul li a:hover {
+    background-position: 0 -45px;
+}
+
+#mainimg {
+    text-align: center; /* 水平中央揃え */
+    margin-top: 45px;
+    margin-bottom: 50px; /* 画像とメニューの間の余白を追加（必要に応じて調整） */
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px; /* 画像間のスペースを30pxに設定（必要に応じて調整） */
+    justify-content: center; /* 画像を中央に配置 */
+}
+
+#mainimg img {
+    width: 90%; /* 幅を指定 */
+    height: auto; /* 高さを自動調整 */
+    display: inline-block; /* 画像をインラインブロックとして表示 */
+    cursor: pointer; /* クリック可能であることを示す */
+}
+
+/* モーダルのスタイル */
+.modal {
+    display: none; /* 初期状態では非表示 */
+    position: fixed;
+    z-index: 1; /* 最前面に表示 */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.8); /* 背景を薄暗く */
+}
+
+/* モーダルのコンテンツ */
+.modal-content {
+    position: relative;
+    margin: 10% auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    max-width: 80%;
+    text-align: left;
+}
+
+/* モーダルのタイトル */
+.modal-title {
+    font-size: 36px;
+    margin: 10px 0;
+    color: #333;
+}
+
+/* モーダルの説明文 */
+.modal-description {
+    font-size: 24px;
+    color: #555;
+    margin: 10px 0;
+}
+
+/* 閉じるボタン */
+.close {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    color: #aaa;
+    font-size: 30px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* モーダル内の画像と説明文を横並びにするコンテナ */
+.modal-description-container {
+    display: flex; /* 横並びレイアウト */
+    justify-content: space-between;
+    gap: 10px; /* 左右の間隔 */
+    min-height: 150px; /* 最小高さを設定 */
+    align-items: flex-start; /* 説明文が長くても画像コンテナが縮まらないようにする */
+}
+
+/* モーダル内の小さい画像のコンテナ */
+.small-images {
+    display: grid; /* グリッドレイアウト */
+    grid-template-columns: repeat(5, 1fr); /* 3列に配置 */
+    grid-gap: 5px; /* 画像間の隙間 */
+    max-height: 80px; /* 画像の最大高さを設定 */
+    overflow-y: auto; /* 高さが超えた場合にスクロール */
+    width: 300px; /* 固定された幅 */
+    height: 150px; /* 固定された高さ */
+}
+
+/* 小さい画像 */
+.small-image {
+    width: 50px; /* 画像の幅を親要素に合わせる */
+    height: auto; /* 高さは自動調整 */
+    max-height: 50px; /* 画像の最大高さを設定（必要に応じて調整） */
+    object-fit: cover; /* 画像のアスペクト比を維持しつつ、枠にフィットさせる */
+}
+
+.link-img {
+    text-align: center; /* 水平中央揃え */
+    margin-top: 45px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px; /* 画像間のスペースを30pxに設定（必要に応じて調整） */
+    justify-content: center; /* 画像を中央に配置 */
+}
+
+.link-img video {
+    width: 90%;
+    max-width: 800px;
+    height: auto;
+    margin: 20px auto;
+    display: block; /* 中央に表示させるために block に */
+    border-radius: 10px;
+}
+
+.video-container {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%; /* 16:9のアスペクト比 */
+    height: 0;
+    overflow: hidden;
+    max-width: 90%; /* 親要素にフィットさせる */
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+#profileimg {
+    text-align: center; /* 水平中央揃え */
+    margin-top: 45px;
+    margin-bottom: 50px; /* 画像とメニューの間の余白を追加（必要に応じて調整） */
+    gap: 30px; /* 画像間のスペースを30pxに設定（必要に応じて調整） */
+    float: left;
+    margin-left: 10px;
+}
+
+#profileimg img {
+    width: 90%; /* 幅を指定 */
+    height: auto; /* 高さを自動調整 */
+    display: inline-block; /* 画像をインラインブロックとして表示 */
+}
+
+#mainpro {
+    color: #363427; /* テキストの色を設定 */
+}
+
+#profileimg {
+    width: 50%; /* 画像の幅を親要素の50%に設定 */
+    height: auto; /* 画像の高さは自動で調整（アスペクト比を維持） */
+    flex-shrink: 0; /* 画像のサイズが縮小しないように設定 */
+}
+
+#name h1 {
+    font-size: 36px; /* 名前の文字サイズを32pxに設定 */
+    margin: 0; /* デフォルトのマージンを削除 */
+    padding: 0; /* デフォルトのパディングを削除 */
+}
+
+#name p {
+    font-size: 26px; /* 英語名の文字サイズを20pxに設定 */
+    margin: 0; /* マージンを削除して隙間を調整 */
+    margin-bottom: 10px; /* 英語名の下に10pxのマージンを追加 */
+}
+
+#ago p {
+    font-size: 24px; /* 年齢の文字サイズを18pxに設定 */
+}
+
+#introduction {
+    margin-top: 24px; /* 紹介文とその他の部分の間に20pxのスペースを追加 */
+    width: 90%; /* 紹介文が親要素の幅いっぱいに広がるように設定 */
+    margin: 0 50px 0 50px;
+}
+
+#introduction p {
+    font-size: 16px; /* 紹介文の文字サイズを16pxに設定 */
+}
+
+#app-container {
+    display: grid; /* グリッドレイアウトを使用 */
+    grid-template-columns: repeat(2, 1fr); /* 2列のレイアウトに設定 */
+    gap: 50px; /* アイコン間に20pxの隙間を追加 */
+    margin: 30px 0 50px 50px;
+}
+
+.app-item {
+    display: flex; /* アイコンとテキストを横並びにする */
+    align-items: center; /* アイコンとテキストを縦方向に中央揃え */
+}
+
+.app-icon {
+    width: 50px; /* アイコンのサイズを50pxに設定 */
+    height: 50px; /* アイコンの高さを50pxに設定 */
+    margin-right: 10px; /* アイコンとテキストの間に10pxのスペースを追加 */
+}
+
+.app-info {
+    display: flex;
+    flex-direction: column; /* テキスト（名前と使用年数）を縦に並べる */
+}
+
+.app-info h3 {
+    font-size: 18px; /* 名前のフォントサイズを18pxに設定 */
+    margin: 0; /* デフォルトのマージンを削除 */
+}
+
+.app-info p {
+    font-size: 14px; /* 使用年数のフォントサイズを14pxに設定 */
+    margin: 0; /* デフォルトのマージンを削除 */
+}
+
+#form {
+    text-align: center;
+}
+
+/*ページトップへ戻るボタン
+-------------------------------------*/
+#pagetop {
+    position: fixed;
+    bottom: 15px;
+    right: 15px;
+    display: none; /* 初期状態では非表示 */
+}
+#pagetop a {
+    display: block;
+    background: url(../img/navi/top.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 50px;
+    padding: 10px 5px;
+    text-indent: -9999px; /* テキストを非表示にする */
+}
+
+/* PC版で横並びにする */
+@media screen and (min-width: 769px) {
+    header .container {
+        display: flex;
+        justify-content: space-between; /* 左右にスペースを確保 */
+        align-items: center;
+    }
+
+    .head {
+        flex: 1;
+    }
+
+    #navi {
+        display: block; /* メニューを常に表示 */
+    }
+
+    /* MENUボタンは非表示 */
+    #open, #close {
+        display: none !important;
+    }
+}
+
+/* PC版で横並びにする */
+@media screen and (min-width: 769px) {
+    header .container {
+        display: flex;
+        justify-content: space-between; /* 左右にスペースを確保 */
+        align-items: center;
+    }
+
+    .head {
+        flex: 1;
+    }
+
+    #navi {
+        display: block; /* メニューを常に表示 */
+    }
+
+    /* ハンバーガーメニュー（#open と #close）は非表示にする */
+    #open, #close {
+        display: none !important;
+    }
+}
+
+@media screen and (min-width: 769px){
+    /* PC時はMENUボタンを非表示 */
+    #open, #close {
+        display: none !important;
+    }
+    
+    #navi {
+        display: block !important;
+    }
+}
+
+/* スマホ版の設定 */
+@media screen and (max-width: 768px){
+    .head {
+        flex-direction: column;
+        text-align: left;
+        margin-bottom: 20px;
+    }
+
+    .head #open, #close {
+        position: absolute;
+        top: 28px;
+        right: 12px; /* 右側にアイコンを配置 */
+    }
+
+    nav ul {
+        flex-direction: column;
+    }
+    
+    nav li {
+        padding-top: 0;
+        border-bottom: 1px solid var(--border-color);
+        margin-bottom: 0;
+    }
+
+    /* スマホ時はMENUボタンを表示 */
+    #open {
+        display: block;
+        background: url(../img/navi/hum1.png);
+        background-repeat: no-repeat;
+        background-size: contain;
+        width: 50px;
+        height: 50px;
+        border: none;
+        position: absolute;
+        top: 20px;
+        right: 12px; /* ハンバーガーアイコンを右に表示 */
+    }
+
+    #close {
+        display: block;
+        background: url(../img/navi/hum2.png);
+        background-repeat: no-repeat;
+        background-size: contain;
+        width: 50px;
+        height: 50px;
+        border: none;
+        position: absolute;
+        top: 20px;
+        right: 12px; /* ハンバーガーアイコンを右に表示 */
+    }
+
+    /* スマホ時はメニューを非表示 */
+    #navi {
+        display: none;
+        position: absolute;
+        top: 0;
+        right: 60px; /* ハンバーガーアイコンの左横に配置 */
+        margin-top: 20px;
+        width: 90px; /* 幅を調整 */
+        height: 135px;
+        box-shadow: 2px 0px 5px rgba(0, 0, 0, 0.1); /* 必要に応じて影を追加 */
+    }
+
+    /* ハンバーガーメニューをクリックしたときにナビを表示 */
+    #open:checked ~ #navi {
+        display: block; /* ナビゲーションを表示 */
+    }
+}
