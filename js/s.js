@@ -16,7 +16,8 @@ modalItems.forEach((item, index) => {
     // 閉じるボタンをクリックしたときにモーダルを非表示にする
     closeBtn.onclick = function() {
         modal.style.display = "none";
-        modalVideo.src = ""; // モーダルを閉じたときに動画を停止
+        //modalVideo.src = ""; 
+        modal.querySelector('iframe').src = modal.querySelector('iframe').src;// モーダルを閉じたときに動画を停止
     }
 
     // モーダル外をクリックした場合にもモーダルを閉じる
@@ -24,7 +25,8 @@ modalItems.forEach((item, index) => {
         // モーダル外（コンテンツ以外）をクリックした場合のみ閉じる
         if (event.target === modal) {
             modal.style.display = "none";
-            modalVideo.src = ""; // モーダルを閉じたときに動画を停止
+            //modalVideo.src = ""; 
+            modal.querySelector('iframe').src = modal.querySelector('iframe').src;// モーダルを閉じたときに動画を停止
         }
     }
 });
