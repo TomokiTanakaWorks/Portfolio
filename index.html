@@ -40,399 +40,117 @@
     </div>
 </header>
 <div id="mainimg">
+    <div id="gallery-container"></div>
 
-    <!-- 尾丸ポルカ 召喚ショーケース -->
-    <div class="image-item">
-        <img src="img/Summon Showcase/Summon Showcase.png" alt="尾丸ポルカ様 召喚ショーケース" class="image" id="image1">
+    <script>
+      const galleryData = [
+        {
+          title: "尾丸ポルカ様 召喚ショーケース",
+          thumbnail: "img/Summon Showcase/Summon Showcase.png",
+          modalImages: [
+            "img/Summon Showcase/Summon Showcase1.png",
+            "img/Summon Showcase/Summon Showcase2.jpg",
+            "img/Summon Showcase/Summon Showcase3.jpg",
+            "img/Summon Showcase/Summon Showcase4.png",
+            "img/Summon Showcase/Summon Showcase5.jpg"
+          ],
+          icons: [
+            "img/icon/Maya.png",
+            "img/icon/blender.png",
+            "img/icon/unity.png",
+            "img/icon/substance-painter.png",
+            "img/icon/Adobe_Photosho.png"
+          ],
+          video: "https://www.youtube.com/embed/R14Ns4REA_g?si=ftc6BxyUxAolQWsv"
+        },
+        {
+          title: "尾丸ポルカ様 召喚ショーケース",
+          thumbnail: "img/Summon Showcase/Summon Showcase.png",
+          modalImages: [
+            "img/Summon Showcase/Summon Showcase1.png",
+            "img/Summon Showcase/Summon Showcase2.jpg",
+            "img/Summon Showcase/Summon Showcase3.jpg",
+            "img/Summon Showcase/Summon Showcase4.png",
+            "img/Summon Showcase/Summon Showcase5.jpg"
+          ],
+          icons: [
+            "img/icon/Maya.png",
+            "img/icon/blender.png",
+            "img/icon/unity.png",
+            "img/icon/substance-painter.png",
+            "img/icon/Adobe_Photosho.png"
+          ],
+          video: "https://youtu.be/R14Ns4REA_g?si=Pe03olx46ve6W3Ay"
+        },
+        {
+          title: "天開司様 Beast",
+          thumbnail: "img/Beast/Beast.png",
+          modalImages: [
+            "img/Beast/Beast1.png",
+            "img/Beast/Beast2.jpg",
+            "img/Beast/Beast3.jpg",
+            "img/Beast/Beast4.jpg",
+            "img/Beast/Beast5.jpg",
+            "img/Beast/Beast6.jpg"
+          ],
+          icons: [
+            "img/icon/Maya.png",
+            "img/icon/shogun.png",
+            "img/icon/unity.png",
+            "img/icon/substance-painter.png",
+            "img/icon/Adobe_Photosho.png"
+          ],
+          video: "https://www.youtube.com/embed/3rQuoLY9BTI?si=HpudxufkVp5qQS9y"
+        }
+      ];
     
-        <!-- モーダルウィンドウ -->
-        <div id="myModal1" class="modal">
-            <div class="modal-content">
+      const container = document.getElementById('gallery-container');
+    
+      galleryData.forEach((item, index) => {
+        const imageId = `image${index + 1}`;
+        const modalId = `myModal${index + 1}`;
+    
+        const iconsHtml = item.icons.map(icon => `<img src="${icon}" class="small-image">`).join('');
+        const modalImgsHtml = item.modalImages.map(img => `<img src="${img}" alt="">`).join('');
+    
+        container.innerHTML += `
+          <div class="image-item">
+            <img src="${item.thumbnail}" alt="${item.title}" class="image" id="${imageId}">
+            
+            <div id="${modalId}" class="modal">
+              <div class="modal-content">
                 <span class="close">&times;</span>
-                <h2 class="modal-title">尾丸ポルカ様 召喚ショーケース</h2>
+                <h2 class="modal-title">${item.title}</h2>
                 <div class="modal-description-container">
-                    <p class="modal-description">ホロライブ所属アーティスト 尾丸ポルカ様オリジナル曲「召喚ショーケース」<br>
-                                                 一部ステージ/プロップデザイン、3Dモデリング、一部ライティングを担当いたしました。<br>
-                                                 森、町のシーンは一部アセットを使用しております。</p>
-    
-                    <!-- 画像を6つ並べる -->
-                    <div class="small-images">
-                        <img src="img/icon/Maya.png" alt="Maya-icon" class="small-image">
-                        <img src="img/icon/blender.png" alt="Blender-icon" class="small-image">
-                        <img src="img/icon/unity.png" alt="unity-icon" class="small-image">
-                        <img src="img/icon/substance-painter.png" alt="SubstancePainter-icon" class="small-image">
-                        <img src="img/icon/Adobe_Photosho.png" alt="Photoshop-icon" class="small-image">
-                        <img src="img/" alt="" class="small-image">
-                    </div>
+                  <p class="modal-description">ここに${item.title}の詳細情報や説明文を記載します。<br>
+                  ここに${item.title}の詳細情報や説明文を記載します。</p>
+                  <div class="small-images">${iconsHtml}</div>
                 </div>
                 <div class="link-img">
-                    <div class="video-container">
-                        <iframe src="https://www.youtube.com/embed/R14Ns4REA_g?si=ftc6BxyUxAolQWsv" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                    </div>
-                    <img src="img/Summon Showcase/Summon Showcase1.png" alt="">
-                    <img src="img/Summon Showcase/Summon Showcase2.jpg" alt="">
-                    <img src="img/Summon Showcase/Summon Showcase3.jpg" alt="">
-                    <img src="img/Summon Showcase/Summon Showcase4.png" alt="">
-                    <img src="img/Summon Showcase/Summon Showcase5.jpg" alt="">
+                  <div class="video-container">
+                    <iframe src="${item.video}" title="${item.title}" frameborder="0" allowfullscreen></iframe>
+                  </div>
+                  ${modalImgsHtml}
                 </div>
+              </div>
             </div>
-        </div>  
-    </div>
-
-    <!-- 天開司 Beast -->
-    <div class="image-item">
-        <img src="img/Beast/Beast.png" alt="天開司様 Beast" class="image" id="image2">
+          </div>
+        `;
     
-        <!-- モーダルウィンドウ -->
-        <div id="myModal2" class="modal">
-            <div class="modal-content">
-                <span class="close">&times;</span>
-                <h2 class="modal-title">天開司様 Beast</h2>
-                <div class="modal-description-container">
-                    <p class="modal-description">ここに画像2の詳細情報や説明文を記載します。<br>
-                                                 ここに画像2の詳細情報や説明文を記載します。<br>
-                                                 ここに画像2の詳細情報や説明文を記載します。</p>
+        // イベント追加（あとでまとめて追加するやり方も可）
+        setTimeout(() => {
+          document.getElementById(imageId).addEventListener('click', () => {
+            document.getElementById(modalId).style.display = 'block';
+          });
     
-                    <!-- 画像を6つ並べる -->
-                    <div class="small-images">
-                        <img src="img/icon/Maya.png" alt="" class="small-image">
-                        <img src="img/icon/shogun.png" alt="" class="small-image">
-                        <img src="img/icon/unity.png" alt="" class="small-image">
-                        <img src="img/icon/substance-painter.png" alt="" class="small-image">
-                        <img src="img/icon/Adobe_Photosho.png" alt="" class="small-image">
-                        <img src="img/" alt="" class="small-image">
-                    </div>
-                </div>
-                <div class="link-img">
-                    <div class="video-container">
-                        <iframe src="https://www.youtube.com/embed/3rQuoLY9BTI?si=HpudxufkVp5qQS9y" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                    </div>
-                    <img src="img/Beast/Beast1.png" alt="">
-                    <img src="img/Beast/Beast2.jpg" alt="">
-                    <img src="img/Beast/Beast3.jpg" alt="">
-                    <img src="img/Beast/Beast4.jpg" alt="">
-                    <img src="img/Beast/Beast5.jpg" alt="">
-                    <img src="img/Beast/Beast6.jpg" alt="">
-                </div>
-            </div>
-        </div>  
-    </div>
-
-    <!-- ゆげちゃんマーチ -->
-    <div class="image-item">
-        <img src="img/uge chan march/uge chan march.png" alt="画像1" class="image" id="image3">
-    
-        <!-- モーダルウィンドウ -->
-        <div id="myModal3" class="modal">
-            <div class="modal-content">
-                <span class="close">&times;</span>
-                <h2 class="modal-title">杏戸ゆげ様 UGE CHAN MARCH</h2>
-                <div class="modal-description-container">
-                    <p class="modal-description">ここに画像1の詳細情報や説明文を記載します。<br>
-                                                 ここに画像1の詳細情報や説明文を記載します。<br>
-                                                 ここに画像1の詳細情報や説明文を記載します。</p>
-    
-                    <!-- 画像を6つ並べる -->
-                    <div class="small-images">
-                        <img src="img/icon/Maya.png" alt="Maya-icon" class="small-image">
-                        <img src="img/icon/blender.png" alt="Blender-icon" class="small-image">
-                        <img src="img/icon/unity.png" alt="unity-icon" class="small-image">
-                        <img src="img/icon/substance-painter.png" alt="SubstancePainter-icon" class="small-image">
-                        <img src="img/icon/Adobe_Photosho.png" alt="Photoshop-icon" class="small-image">
-                        <img src="img/" alt="" class="small-image">
-                    </div>
-                </div>
-                <div class="link-img">
-                    <div class="video-container">
-                        <iframe width="560" height="315" src="https://www.youtube.com/embed/tgPK9TH76vE?si=I92vQuVs2L_0lwAe" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                    </div>
-                    <img src="img/uge chan march/uge chan march1.jpg" alt="">
-                    <img src="img/uge chan march/uge chan march2.jpg" alt="">
-                    <img src="img/uge chan march/uge chan march3.png" alt="">
-                    <img src="img/uge chan march/uge chan march4.png" alt="">
-                    <img src="img/uge chan march/uge chan march5.png" alt="">
-                    <img src="img/uge chan march/uge chan march6.png" alt="">
-                    <video src="img/uge chan march/uge chan march7.mp4" controls></video>
-                </div>
-            </div>
-        </div>  
-    </div>
-
-    <!-- 銀河アリス通常収録 -->
-    <div class="image-item">
-        <img src="img/AliceRecStudio/Alice_RecStudio.png" alt="画像1" class="image" id="image4">
-    
-        <!-- モーダルウィンドウ -->
-        <div id="myModal4" class="modal">
-            <div class="modal-content">
-                <span class="close">&times;</span>
-                <h2 class="modal-title">銀河アリス様 収録ステージ制作</h2>
-                <div class="modal-description-container">
-                    <p class="modal-description">ここに画像1の詳細情報や説明文を記載します。<br>
-                                                 ここに画像1の詳細情報や説明文を記載します。<br>
-                                                 ここに画像1の詳細情報や説明文を記載します。</p>
-    
-                    <!-- 画像を6つ並べる -->
-                    <div class="small-images">
-                        <img src="img/icon/Maya.png" alt="Maya-icon" class="small-image">
-                        <img src="img/icon/blender.png" alt="Blender-icon" class="small-image">
-                        <img src="img/icon/unity.png" alt="unity-icon" class="small-image">
-                        <img src="img/icon/substance-painter.png" alt="SubstancePainter-icon" class="small-image">
-                        <img src="img/icon/Adobe_Photosho.png" alt="Photoshop-icon" class="small-image">
-                        <img src="img/" alt="" class="small-image">
-                    </div>
-                </div>
-                <div class="link-img">
-                    <div class="video-container">
-                        <iframe width="560" height="315" src="https://www.youtube.com/embed/0GiJhweM_aU?si=PMf53WF3JnQoPDax" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                    </div>
-                    <img src="img/AliceRecStudio/Alice_RecStudio1.jpg" alt="">
-                    <img src="img/AliceRecStudio/Alice_RecStudio2.jpg" alt="">
-                    <img src="img/AliceRecStudio/Alice_RecStudio3.jpg" alt="">
-                    <img src="img/AliceRecStudio/Alice_RecStudio4.jpg" alt="">
-                    <img src="img/AliceRecStudio/Alice_RecStudio5.jpg" alt="">
-                </div>
-            </div>
-        </div>  
-    </div>
-
-    <!-- 銀河アリス3周年 -->
-    <div class="image-item">
-        <img src="img/Alice3rd/Alice3rd.png" alt="画像1" class="image" id="image5">
-    
-        <!-- モーダルウィンドウ -->
-        <div id="myModal5" class="modal">
-            <div class="modal-content">
-                <span class="close">&times;</span>
-                <h2 class="modal-title">銀河アリス様 ３周年ライブ ステージデザイン/制作</h2>
-                <div class="modal-description-container">
-                    <p class="modal-description">ここに画像1の詳細情報や説明文を記載します。<br>
-                                                 ここに画像1の詳細情報や説明文を記載します。<br>
-                                                 ここに画像1の詳細情報や説明文を記載します。</p>
-    
-                    <!-- 画像を6つ並べる -->
-                    <div class="small-images">
-                        <img src="img/icon/Maya.png" alt="Maya-icon" class="small-image">
-                        <img src="img/icon/blender.png" alt="Blender-icon" class="small-image">
-                        <img src="img/icon/unity.png" alt="unity-icon" class="small-image">
-                        <img src="img/icon/substance-painter.png" alt="SubstancePainter-icon" class="small-image">
-                        <img src="img/icon/Adobe_Photosho.png" alt="Photoshop-icon" class="small-image">
-                        <img src="img/" alt="" class="small-image">
-                    </div>
-                </div>
-                <div class="link-img">
-                    <div class="video-container">
-                        <iframe width="560" height="315" src="https://www.youtube.com/embed/9qn9xvYypjU?si=1fcMuZs9xkU5NNhq&amp;start=965" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                    </div>
-                    <img src="img/Alice3rd/Alice3rd1.jfif" alt="">
-                    <img src="img/Alice3rd/Alice3rd2.jfif" alt="">
-                    <img src="img/Alice3rd/Alice3rd3.png" alt="">
-                    <img src="img/Alice3rd/Alice3rd4.jfif" alt="">
-                    <img src="img/Alice3rd/Alice3rd5.jfif" alt="">
-                    <img src="img/Alice3rd/Alice3rd6.jpg" alt="">
-                    <img src="img/Alice3rd/Alice3rd7.png" alt="">
-                </div>
-            </div>
-        </div>  
-    </div>
-
-    <!--シュガリリ2nd-->
-    <div class="image-item">
-        <img src="img/SL/SL.png" alt="画像1" class="image" id="image6">
-    
-        <!-- モーダルウィンドウ -->
-        <div id="myModal6" class="modal">
-            <div class="modal-content">
-                <span class="close">&times;</span>
-                <h2 class="modal-title">Sugar Lylic様 2ndライブ ステージデザイン/製作</h2>
-                <div class="modal-description-container">
-                    <p class="modal-description">ここに画像1の詳細情報や説明文を記載します。<br>
-                                                 ここに画像1の詳細情報や説明文を記載します。<br>
-                                                 ここに画像1の詳細情報や説明文を記載します。</p>
-    
-                    <!-- 画像を6つ並べる -->
-                    <div class="small-images">
-                        <img src="img/icon/Maya.png" alt="Maya-icon" class="small-image">
-                        <img src="img/icon/blender.png" alt="Blender-icon" class="small-image">
-                        <img src="img/icon/unity.png" alt="unity-icon" class="small-image">
-                        <img src="img/icon/substance-painter.png" alt="SubstancePainter-icon" class="small-image">
-                        <img src="img/icon/Adobe_Photosho.png" alt="Photoshop-icon" class="small-image">
-                        <img src="img/" alt="" class="small-image">
-                    </div>
-                </div>
-                <div class="link-img">
-                    <div class="video-container">
-                        <iframe width="560" height="315" src="https://www.youtube.com/embed/8gVN75emRWU?si=w8ovTu8Hd9EXU2Fo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                    </div>
-                    <img src="img/SL/SL1.jpg" alt="">
-                    <img src="img/SL/SL2.jpg" alt="">
-                    <img src="img/SL/SL3.jpg" alt="">
-                    <img src="img/SL/SL4.jpg" alt="">
-                    <img src="img/SL/SL5.jpg" alt="">
-                    <img src="img/SL/SL6.jpg" alt="">
-                    <img src="img/SL/SL7.jpg" alt="">
-                    <img src="img/SL/SL8.jpg" alt="">
-                </div>
-            </div>
-        </div>  
-    </div>
-
-    <!-- 画像とモーダルを並べる -->
-    <div class="image-item">
-        <img src="img/Summon Showcase/Summon Showcase.png" alt="画像1" class="image" id="image7">
-    
-        <!-- モーダルウィンドウ -->
-        <div id="myModal7" class="modal">
-            <div class="modal-content">
-                <span class="close">&times;</span>
-                <h2 class="modal-title">尾丸ポルカ様 召喚ショーケース</h2>
-                <div class="modal-description-container">
-                    <p class="modal-description">ここに画像1の詳細情報や説明文を記載します。<br>
-                                                 ここに画像1の詳細情報や説明文を記載します。<br>
-                                                 ここに画像1の詳細情報や説明文を記載します。</p>
-    
-                    <!-- 画像を6つ並べる -->
-                    <div class="small-images">
-                        <img src="img/icon/Maya.png" alt="Maya-icon" class="small-image">
-                        <img src="img/icon/blender.png" alt="Blender-icon" class="small-image">
-                        <img src="img/icon/unity.png" alt="unity-icon" class="small-image">
-                        <img src="img/icon/substance-painter.png" alt="SubstancePainter-icon" class="small-image">
-                        <img src="img/icon/Adobe_Photosho.png" alt="Photoshop-icon" class="small-image">
-                        <img src="img/" alt="" class="small-image">
-                    </div>
-                </div>
-                <div class="link-img">
-                    <div class="video-container">
-                        <iframe src="https://www.youtube.com/embed/R14Ns4REA_g?si=ftc6BxyUxAolQWsv" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                    </div>
-                    <img src="img/Summon Showcase/Summon Showcase1.png" alt="">
-                    <img src="img/Summon Showcase/Summon Showcase2.jpg" alt="">
-                    <img src="img/Summon Showcase/Summon Showcase3.jpg" alt="">
-                    <img src="img/Summon Showcase/Summon Showcase4.png" alt="">
-                    <img src="img/Summon Showcase/Summon Showcase5.jpg" alt="">
-                </div>
-            </div>
-        </div>  
-    </div>
-
-    <!-- 画像とモーダルを並べる -->
-    <div class="image-item">
-        <img src="img/Summon Showcase/Summon Showcase.png" alt="画像" class="image" id="image8">
-    
-        <!-- モーダルウィンドウ -->
-        <div id="myModal8" class="modal">
-            <div class="modal-content">
-                <span class="close">&times;</span>
-                <h2 class="modal-title">尾丸ポルカ様 召喚ショーケース</h2>
-                <div class="modal-description-container">
-                    <p class="modal-description">ここに画像1の詳細情報や説明文を記載します。<br>
-                                                 ここに画像1の詳細情報や説明文を記載します。<br>
-                                                 ここに画像1の詳細情報や説明文を記載します。</p>
-    
-                    <!-- 画像を6つ並べる -->
-                    <div class="small-images">
-                        <img src="img/icon/Maya.png" alt="Maya-icon" class="small-image">
-                        <img src="img/icon/blender.png" alt="Blender-icon" class="small-image">
-                        <img src="img/icon/unity.png" alt="unity-icon" class="small-image">
-                        <img src="img/icon/substance-painter.png" alt="SubstancePainter-icon" class="small-image">
-                        <img src="img/icon/Adobe_Photosho.png" alt="Photoshop-icon" class="small-image">
-                        <img src="img/" alt="" class="small-image">
-                    </div>
-                </div>
-                <div class="link-img">
-                    <div class="video-container">
-                        <iframe src="https://www.youtube.com/embed/R14Ns4REA_g?si=ftc6BxyUxAolQWsv" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                    </div>
-                    <img src="img/Summon Showcase/Summon Showcase1.png" alt="">
-                    <img src="img/Summon Showcase/Summon Showcase2.jpg" alt="">
-                    <img src="img/Summon Showcase/Summon Showcase3.jpg" alt="">
-                    <img src="img/Summon Showcase/Summon Showcase4.png" alt="">
-                    <img src="img/Summon Showcase/Summon Showcase5.jpg" alt="">
-                </div>
-            </div>
-        </div>  
-    </div>
-
-    <!-- 画像とモーダルを並べる -->
-    <div class="image-item">
-        <img src="img/Summon Showcase/Summon Showcase.png" alt="画像1" class="image" id="image9">
-    
-        <!-- モーダルウィンドウ -->
-        <div id="myModal9" class="modal">
-            <div class="modal-content">
-                <span class="close">&times;</span>
-                <h2 class="modal-title">尾丸ポルカ様 召喚ショーケース</h2>
-                <div class="modal-description-container">
-                    <p class="modal-description">ここに画像1の詳細情報や説明文を記載します。<br>
-                                                 ここに画像1の詳細情報や説明文を記載します。<br>
-                                                 ここに画像1の詳細情報や説明文を記載します。</p>
-    
-                    <!-- 画像を6つ並べる -->
-                    <div class="small-images">
-                        <img src="img/icon/Maya.png" alt="Maya-icon" class="small-image">
-                        <img src="img/icon/blender.png" alt="Blender-icon" class="small-image">
-                        <img src="img/icon/unity.png" alt="unity-icon" class="small-image">
-                        <img src="img/icon/substance-painter.png" alt="SubstancePainter-icon" class="small-image">
-                        <img src="img/icon/Adobe_Photosho.png" alt="Photoshop-icon" class="small-image">
-                        <img src="img/" alt="" class="small-image">
-                    </div>
-                </div>
-                <div class="link-img">
-                    <div class="video-container">
-                        <iframe src="https://www.youtube.com/embed/R14Ns4REA_g?si=ftc6BxyUxAolQWsv" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                    </div>
-                    <img src="img/Summon Showcase/Summon Showcase1.png" alt="">
-                    <img src="img/Summon Showcase/Summon Showcase2.jpg" alt="">
-                    <img src="img/Summon Showcase/Summon Showcase3.jpg" alt="">
-                    <img src="img/Summon Showcase/Summon Showcase4.png" alt="">
-                    <img src="img/Summon Showcase/Summon Showcase5.jpg" alt="">
-                </div>
-            </div>
-        </div>  
-    </div>
-
-    <!-- 画像とモーダルを並べる -->
-    <div class="image-item">
-        <img src="img/Summon Showcase/Summon Showcase.png" alt="画像1" class="image" id="image2">
-    
-        <!-- モーダルウィンドウ -->
-        <div id="myModal2" class="modal">
-            <div class="modal-content">
-                <span class="close">&times;</span>
-                <h2 class="modal-title">尾丸ポルカ様 召喚ショーケース</h2>
-                <div class="modal-description-container">
-                    <p class="modal-description">ここに画像1の詳細情報や説明文を記載します。<br>
-                                                 ここに画像1の詳細情報や説明文を記載します。<br>
-                                                 ここに画像1の詳細情報や説明文を記載します。</p>
-    
-                    <!-- 画像を6つ並べる -->
-                    <div class="small-images">
-                        <img src="img/icon/Maya.png" alt="Maya-icon" class="small-image">
-                        <img src="img/icon/blender.png" alt="Blender-icon" class="small-image">
-                        <img src="img/icon/unity.png" alt="unity-icon" class="small-image">
-                        <img src="img/icon/substance-painter.png" alt="SubstancePainter-icon" class="small-image">
-                        <img src="img/icon/Adobe_Photosho.png" alt="Photoshop-icon" class="small-image">
-                        <img src="img/" alt="" class="small-image">
-                    </div>
-                </div>
-                <div class="link-img">
-                    <div class="video-container">
-                        <iframe src="https://www.youtube.com/embed/R14Ns4REA_g?si=ftc6BxyUxAolQWsv" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                    </div>
-                    <img src="img/Summon Showcase/Summon Showcase1.png" alt="">
-                    <img src="img/Summon Showcase/Summon Showcase2.jpg" alt="">
-                    <img src="img/Summon Showcase/Summon Showcase3.jpg" alt="">
-                    <img src="img/Summon Showcase/Summon Showcase4.png" alt="">
-                    <img src="img/Summon Showcase/Summon Showcase5.jpg" alt="">
-                </div>
-            </div>
-        </div>  
-    </div>
-
-
-
+          document.querySelector(`#${modalId} .close`).addEventListener('click', () => {
+            document.getElementById(modalId).style.display = 'none';
+          });
+        }, 0);
+      });
+    </script>
 </div>
 <p id="pagetop"><a href="#">TOP</a></p>
-<script src="js/s.js"></script>
 </body>
+<script src="js/s.js"></script>
 </html>
