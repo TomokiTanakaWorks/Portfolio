@@ -44,9 +44,11 @@
 
     <script>
       const galleryData = [
+        //召喚ショーケース
         {
           title: "尾丸ポルカ様 召喚ショーケース",
           thumbnail: "img/Summon Showcase/Summon Showcase.png",
+          discription: "write here some discription<br>これで改行もされているはず",
           modalImages: [
             "img/Summon Showcase/Summon Showcase1.png",
             "img/Summon Showcase/Summon Showcase2.jpg",
@@ -63,28 +65,11 @@
           ],
           video: "https://www.youtube.com/embed/R14Ns4REA_g?si=ftc6BxyUxAolQWsv"
         },
-        {
-          title: "尾丸ポルカ様 召喚ショーケース",
-          thumbnail: "img/Summon Showcase/Summon Showcase.png",
-          modalImages: [
-            "img/Summon Showcase/Summon Showcase1.png",
-            "img/Summon Showcase/Summon Showcase2.jpg",
-            "img/Summon Showcase/Summon Showcase3.jpg",
-            "img/Summon Showcase/Summon Showcase4.png",
-            "img/Summon Showcase/Summon Showcase5.jpg"
-          ],
-          icons: [
-            "img/icon/Maya.png",
-            "img/icon/blender.png",
-            "img/icon/unity.png",
-            "img/icon/substance-painter.png",
-            "img/icon/Adobe_Photosho.png"
-          ],
-          video: "https://youtu.be/R14Ns4REA_g?si=Pe03olx46ve6W3Ay"
-        },
+        //Beast
         {
           title: "天開司様 Beast",
           thumbnail: "img/Beast/Beast.png",
+          discription: "write here some discription<br>ほげほげ",
           modalImages: [
             "img/Beast/Beast1.png",
             "img/Beast/Beast2.jpg",
@@ -122,8 +107,7 @@
                 <span class="close">&times;</span>
                 <h2 class="modal-title">${item.title}</h2>
                 <div class="modal-description-container">
-                  <p class="modal-description">ここに${item.title}の詳細情報や説明文を記載します。<br>
-                  ここに${item.title}の詳細情報や説明文を記載します。</p>
+                  <p class="modal-description">${item.discription}</p>
                   <div class="small-images">${iconsHtml}</div>
                 </div>
                 <div class="link-img">
