@@ -128,7 +128,8 @@
              "img/Gekijou/Gekijou2.png",
              "img/Gekijou/Gekijou3.png",
              "img/Gekijou/Gekijou4.png",
-             "img/Gekijou/Gekijou5.png",
+              "img/Gekijou/Gekijou5.png",
+              "img/Gekijou/Gekijou6.jpg"
           ],
             icons: [
                 "img/icon/Maya.png",
@@ -156,20 +157,48 @@
         //すとふぁみ
         {
           title: "すとぷり様 ファンクラブ背景製作",
-            thumbnail: "img/Stfami/Stfami2.jpg",
+          thumbnail: "img/Stfami/Stfami.png",
           discription: "権利の都合上、一般公開されている画像のみ掲載いたします。",
           modalImages: [
-             "img/STPRKouhaku/STPRKouhaku1.jfif",
-          ],
-            modalImages: [
                 "img/Stfami/Stfami2.jpg",
                 "img/Stfami/Stfami3.jpg",
                 "img/Stfami/Stfami4.jpg",
                 "img/Stfami/Stfami5.jpg",
                 "img/Stfami/Stfami6.jpg",
                 "img/Stfami/Stfami7.jpg"
-            ],
-            video: "https://www.youtube.com/embed/IWHxRutOI04?si=hv-DqxuTK3O8-W-U" 
+          ],
+         icons: [
+                "img/icon/Maya.png",
+                "img/icon/shogun.png",
+                "img/icon/unity.png",
+                "img/icon/substance-painter.png",
+                "img/icon/Adobe_Photosho.png"
+         ],
+            video: "" 
+          },
+        //PropCam
+        {
+          title: "Mocapスタジオ用手持ちカメラ治具製作",
+          thumbnail: "img/PropCam/PropCam.png",
+          discription: "権利の都合上、一般公開されている画像のみ掲載いたします。",
+          modalImages: [
+                "img/PropCam/PropCam2.jpg",
+                "img/PropCam/PropCam3.jpg",
+                "img/PropCam/PropCam4.jpg",
+                "img/PropCam/PropCam5.jpg",
+                "img/PropCam/PropCam6.jpg",
+                "img/PropCam/PropCam7.png",
+                "img/PropCam/PropCam8.png",
+
+          ],
+         icons: [
+                "img/icon/Maya.png",
+                "img/icon/shogun.png",
+                "img/icon/unity.png",
+                "img/icon/substance-painter.png",
+                "img/icon/Adobe_Photosho.png"
+         ],
+            video: "" 
         },
         //Beast
         {
@@ -203,8 +232,9 @@
     
         const iconsHtml = item.icons.map(icon => `<img src="${icon}" class="small-image">`).join('');
         const modalImgsHtml = item.modalImages.map(img => `<img src="${img}" alt="">`).join('');
-    
-        container.innerHTML += `
+
+          if (item.video != "") {
+              container.innerHTML += `
           <div class="image-item">
             <img src="${item.thumbnail}" alt="${item.title}" class="image" id="${imageId}">
             
@@ -226,6 +256,27 @@
             </div>
           </div>
         `;
+          } else {
+              container.innerHTML += `
+  <div class="image-item">
+    <img src="${item.thumbnail}" alt="${item.title}" class="image" id="${imageId}">
+    
+    <div id="${modalId}" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2 class="modal-title">${item.title}</h2>
+        <div class="modal-description-container">
+          <p class="modal-description">${item.discription}</p>
+          <div class="small-images">${iconsHtml}</div>
+        </div>
+        <div class="link-img">
+          ${modalImgsHtml}
+        </div>
+      </div>
+    </div>
+  </div>
+`;
+          }
     
         // イベント追加（あとでまとめて追加するやり方も可）
         setTimeout(() => {
