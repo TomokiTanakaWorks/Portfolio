@@ -3,374 +3,449 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Tanaka Tomoki - Portfolio</title>
-<link rel="stylesheet" media="all" href="css/ress.min.css" />
-<link rel="stylesheet" media="all" href="css/style.css" />
-<script src="js/jquery-3.6.0.min.js"></script>
-<script src="js/style.js"></script>
+    <link rel="stylesheet" media="all" href="css/ress.min.css" />
+    <link rel="stylesheet" media="all" href="css/style.css" />
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/style.js"></script>
 
-<!-- Favicon -->
-<link rel="icon" type="image/png" href="img/favicon.png">
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="img/favicon.png">
 
 </head>
 <body id="home">
-<header>    
-    <div class="container">
-        <div class="row">
-            <div class="col span-12">
-                <div class="head">
-                    <a href="index.html"><h1>Tanaka Tomoki - Portfolio</h1></a>
+    <header>
+        <div class="container">
+            <div class="row">
+                <div class="col span-12">
+                    <div class="head">
+                        <a href="index.html"><h1>Tanaka Tomoki - Portfolio</h1></a>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col span-12">
+                    <nav>
+                        <div id="open"></div>
+                        <div id="close"></div>
+                        <div id="navi">
+                            <ul>
+                                <li id="nav_home"><a href="index.html">Home</a></li>
+                                <li id="nav_about"><a href="about.html">About</a></li>
+                                <li id="nav_contact"><a href="contact.html">Contact</a></li>
+                            </ul>
+                        </div>
+                    </nav>
                 </div>
             </div>
         </div>
-        <div class="row">
-            <div class="col span-12">
-                <nav>
-                    <div id="open"></div>
-                    <div id="close"></div>    
-                    <div id="navi">
-                        <ul>
-                            <li id="nav_home"><a href="index.html">Home</a></li>
-                            <li id="nav_about"><a href="about.html">About</a></li>
-                            <li id="nav_contact"><a href="contact.html">Contact</a></li>
-                        </ul>
+    </header>
+    <div id="mainimg">
+        <div id="gallery-container"></div>
+
+        <script>
+            const galleryData = [
+                //召喚ショーケース
+                {
+                    title: "尾丸ポルカ様 召喚ショーケース　3D背景製作/デザイン",
+                    thumbnail: "img/Summon Showcase/Summon Showcase.png",
+                    discription: "write here some discription<br>これで改行もされているはず",
+                    modalImages: [
+                        "img/Summon Showcase/Summon Showcase1.png",
+                        "img/Summon Showcase/Summon Showcase2.jpg",
+                        "img/Summon Showcase/Summon Showcase3.jpg",
+                        "img/Summon Showcase/Summon Showcase4.png",
+                        "img/Summon Showcase/Summon Showcase5.jpg"
+                    ],
+                    icons: [
+                        "img/icon/Maya.png",
+                        "img/icon/blender.png",
+                        "img/icon/unity.png",
+                        "img/icon/substance-painter.png",
+                        "img/icon/Adobe_Photosho.png"
+                    ],
+                    video: "https://www.youtube.com/embed/R14Ns4REA_g?si=ftc6BxyUxAolQWsv"
+                },
+                //にゃんたTheEarth
+                {
+                    title: "にゃんたじあ! 様 にゃんたtheEarth! 一部3D製作",
+                    thumbnail: "img/NyantaTheEarth/NyantaTheEarth.png",
+                    discription: "write here some discription<br>これで改行もされているはず",
+                    modalImages: [
+                        "img/NyantaTheEarth/NyantaTheEarth1.png",
+                        "img/NyantaTheEarth/NyantaTheEarth2.png",
+                        "img/NyantaTheEarth/NyantaTheEarth3.png",
+                        "img/NyantaTheEarth/NyantaTheEarth4.png",
+                        "img/NyantaTheEarth/NyantaTheEarth5.png"
+                    ],
+                    icons: [
+                        "img/icon/blender.png",
+                        "img/icon/substance-painter.png",
+                        "img/icon/Adobe_Photosho.png"
+                    ],
+                    video: "https://www.youtube.com/embed/9SS5RfsSxEk?si=LKYWZlRTiqPiHQvK&amp;start=80"
+                },
+                //糸電話
+                {
+                    title: "なとり 様 糸電話 アシスタントディレクター/一部着色担当",
+                    thumbnail: "img/Itodenwa/Itodenwa.png",
+                    discription: "write here some discription<br>これで改行もされているはず",
+                    modalImages: [
+                        "img/Itodenwa/Itodenwa1.png",
+                        "img/Itodenwa/Itodenwa2.png",
+                        "img/Itodenwa/Itodenwa3.png",
+                        "img/Itodenwa/Itodenwa4.png"
+                    ],
+                    icons: [
+                        "img/icon/Adobe_Photosho.png"
+                    ],
+                    video: "https://www.youtube.com/embed/d48uxNdIPHM?si=Z7Y-7QbC1Wi1hHNJ"
+                },
+                //Precious
+                {
+                    title: "シクフォニ 様 Precious 一部3D製作",
+                    thumbnail: "img/Precious/Precious.png",
+                    discription: "write here some discription<br>これで改行もされているはず",
+                    modalImages: [
+                        "img/Precious/Precious1.jpg",
+                        "img/Precious/Precious2.jpg",
+                        "img/Precious/Precious3.png",
+                        "img/Precious/Precious4.png",
+                        "img/Precious/Precious5.png",
+                    ],
+                    icons: [
+                        "img/icon/blender.png",
+                        "img/icon/substance-painter.png",
+                    ],
+                    video: "https://www.youtube.com/embed/WvW6NZiR1tc?si=9Knwma2oCPB9PkHn&amp;start=139"
+                },
+                //劇場 BGV製作
+                {
+                    title: "なとり様 1stONE-MAN LIVE 劇場 背景映像製作",
+                    thumbnail: "img/Gekijou/Gekijou.png",
+                    discription: "write here some discription<br>これで改行もされているはず",
+                    modalImages: [
+                        "img/Gekijou/Gekijou1.jpg",
+                        "img/Gekijou/Gekijou2.png",
+                        "img/Gekijou/Gekijou3.png",
+                        "img/Gekijou/Gekijou4.png",
+                        "img/Gekijou/Gekijou5.png",
+                        "img/Gekijou/Gekijou6.jpg"
+                    ],
+                    icons: [
+                        "img/icon/Maya.png",
+                        "img/icon/blender.png",
+                        "img/icon/substance-painter.png",
+                        "img/icon/Adobe_Photosho.png"
+                    ],
+                    video: "https://www.youtube.com/embed/fQBWmlwO5p8?si=9KUgdVOQ5VG-i5WA"
+                },
+                //すとぷり紅白
+                {
+                    title: "すとぷり様 2023紅白歌合戦 モデル,表情調整/現場オペレーション",
+                    thumbnail: "img/STPRKouhaku/STPRKouhaku.png",
+                    discription: "権利の都合上、一般公開されている画像のみ掲載いたします。",
+                    modalImages: [
+                        "img/STPRKouhaku/STPRKouhaku1.jfif",
+                    ],
+                    icons: [
+                        "img/icon/Maya.png",
+                        "img/icon/shogun.png",
+                        "img/icon/unity.png"
+                    ],
+                    video: "https://www.youtube.com/embed/IWHxRutOI04?si=hv-DqxuTK3O8-W-U"
+                },
+                //すとふぁみ
+                {
+                    title: "すとぷり様 ファンクラブ背景製作",
+                    thumbnail: "img/Stfami/Stfami.png",
+                    discription: "権利の都合上、一般公開されている画像のみ掲載いたします。",
+                    modalImages: [
+                        "img/Stfami/Stfami2.jpg",
+                        "img/Stfami/Stfami3.jpg",
+                        "img/Stfami/Stfami4.jpg",
+                        "img/Stfami/Stfami5.jpg",
+                        "img/Stfami/Stfami6.jpg",
+                        "img/Stfami/Stfami7.jpg"
+                    ],
+                    icons: [
+                        "img/icon/Maya.png",
+                        "img/icon/shogun.png",
+                        "img/icon/unity.png",
+                        "img/icon/substance-painter.png",
+                        "img/icon/Adobe_Photosho.png"
+                    ],
+                    video: ""
+                },
+                //PropCam
+                {
+                    title: "Mocapスタジオ用手持ちカメラ治具製作",
+                    thumbnail: "img/PropCam/PropCam.png",
+                    discription: "権利の都合上、一般公開されている画像のみ掲載いたします。",
+                    modalImages: [
+                        "img/PropCam/PropCam2.jpg",
+                        "img/PropCam/PropCam3.jpg",
+                        "img/PropCam/PropCam4.jpg",
+                        "img/PropCam/PropCam5.jpg",
+                        "img/PropCam/PropCam6.jpg",
+                        "img/PropCam/PropCam7.png",
+                        "img/PropCam/PropCam8.png"
+
+                    ],
+                    icons: [
+                        "img/icon/Maya.png",
+                        "img/icon/shogun.png",
+                        "img/icon/unity.png",
+                        "img/icon/substance-painter.png",
+                        "img/icon/Adobe_Photosho.png"
+                    ],
+                    video: ""
+                },
+                //ClubAxC
+                {
+                    title: "AMPTAKxCOLORS様 Club A×C -歌舞伎町店-　背景製作",
+                    thumbnail: "img/ClubAC/ClubAC.png",
+                    discription: "権利の都合上、一般公開されている画像のみ掲載いたします。",
+                    modalImages: [
+                        "img/ClubAC/ClubAC2.jpg",
+                        "img/ClubAC/ClubAC3.jpg",
+                        "img/ClubAC/ClubAC4.png",
+                        "img/ClubAC/ClubAC5.png"
+
+                    ],
+                    icons: [
+                        "img/icon/Maya.png",
+                        "img/icon/shogun.png",
+                        "img/icon/unity.png",
+                        "img/icon/substance-painter.png",
+                        "img/icon/Adobe_Photosho.png"
+                    ],
+                    video: "https://www.youtube.com/embed/fRwpBn8ND5Y?si=nIdNtUJJnD8eNj1E"
+                },
+                //OneWeekLove
+                {
+                    title: "AMPTAKxCOLORS様 OneWeekLove　背景製作",
+                    thumbnail: "img/OneWeekLove/OneWeekLove.png",
+                    discription: "権利の都合上、一般公開されている画像のみ掲載いたします。",
+                    modalImages: [
+                        "img/OneWeekLove/OneWeekLove2.png",
+                        "img/OneWeekLove/OneWeekLove3.png",
+                        "img/OneWeekLove/OneWeekLove4.png",
+                        "img/OneWeekLove/OneWeekLove5.png"
+
+                    ],
+                    icons: [
+                        "img/icon/Maya.png",
+                        "img/icon/shogun.png",
+                        "img/icon/unity.png",
+                        "img/icon/substance-painter.png",
+                        "img/icon/Adobe_Photosho.png"
+                    ],
+                    video: "https://www.youtube.com/embed/_4vRHcBJQCg?si=2-zuDihRqMrBgkkb"
+                },
+                //KightGame
+                {
+                    title: "騎士A 様 KightGame 一部CG製作",
+                    thumbnail: "img/KightGame/KightGame.png",
+                    discription: "権利の都合上、一般公開されている画像のみ掲載いたします。",
+                    modalImages: [
+                        "img/KightGame/KightGame2.png",
+                        "img/KightGame/KightGame3.png",
+                        "img/KightGame/KightGame4.png",
+                        "img/KightGame/KightGame5.png",
+                        "img/KightGame/KightGame6.png"
+
+                    ],
+                    icons: [
+                        "img/icon/Maya.png",
+                        "img/icon/shogun.png",
+                        "img/icon/unity.png",
+                        "img/icon/substance-painter.png",
+                        "img/icon/Adobe_Photosho.png"
+                    ],
+                    video: "https://www.youtube.com/embed/SSPOiDCBBEc?si=-LyO89T-dewV3yao"
+                },
+                //すとぷりくえすと
+                {
+                    title: "すとぷり様　すとぷりくえすとっ 背景一部制作/調整",
+                    thumbnail: "img/STPRQuest/STPRQuest.png",
+                    discription: "権利の都合上、一般公開されている画像のみ掲載いたします。",
+                    modalImages: [
+                        "img/STPRQuest/STPRQuest2.jpg",
+                        "img/STPRQuest/STPRQuest3.jpg",
+                        "img/STPRQuest/STPRQuest4.jpg",
+                        "img/STPRQuest/STPRQuest5.jpg",
+                        "img/STPRQuest/STPRQuest6.jpg"
+
+                    ],
+                    icons: [
+                        "img/icon/Maya.png",
+                        "img/icon/shogun.png",
+                        "img/icon/unity.png",
+                        "img/icon/substance-painter.png",
+                        "img/icon/Adobe_Photosho.png"
+                    ],
+                    video: "https://www.youtube.com/embed/7NE5zyNjjFA?si=z0AbOpch1Z358U7I&amp;start=510"
+                },
+                //すとぷりHWG
+                {
+                    title: "すとぷり様　すとぷりのHereWeGo!! 背景一部制作/調整",
+                    thumbnail: "img/HereWeGo/HereWeGo.png",
+                    discription: "権利の都合上、一般公開されている画像のみ掲載いたします。",
+                    modalImages: [
+                        "img/HereWeGo/HereWeGo2.jpg",
+                        "img/HereWeGo/HereWeGo3.jpg",
+                        "img/HereWeGo/HereWeGo4.jpg",
+                        "img/HereWeGo/HereWeGo5.png",
+                        "img/HereWeGo/HereWeGo6.png",
+                        "img/HereWeGo/HereWeGo7.png",
+
+
+                    ],
+                    icons: [
+                        "img/icon/Maya.png",
+                        "img/icon/shogun.png",
+                        "img/icon/unity.png",
+                        "img/icon/substance-painter.png",
+                        "img/icon/Adobe_Photosho.png"
+                    ],
+                    video: "https://www.youtube.com/embed/PIAgPNR5ENU?si=7lGNldr7K9bIm4My"
+                },
+                //Hollow
+                {
+                    title: "higma＆gaburyu - ホロウ 背景一部制作",
+                    thumbnail: "img/Hollow/Hollow.png",
+                    discription: "権利の都合上、一般公開されている画像のみ掲載いたします。",
+                    modalImages: [
+                        "img/Hollow/Hollow1.png",
+                        "img/Hollow/Hollow2.png",
+                        "img/Hollow/Hollow3.png",
+                        "img/Hollow/Hollow4.png",
+                        "img/Hollow/Hollow5.png",
+
+
+                    ],
+                    icons: [
+                        "img/icon/Maya.png",
+                        "img/icon/shogun.png",
+                        "img/icon/unity.png",
+                        "img/icon/substance-painter.png",
+                        "img/icon/Adobe_Photosho.png"
+                    ],
+                    video: "https://www.youtube.com/embed/iTKM_3mdBsM?si=bGMc6Hu26nwjL1IY"
+                },
+                //Beast
+                {
+                    title: "天開司様 Beast 3D背景製作/デザイン",
+                    thumbnail: "img/Beast/Beast.png",
+                    discription: "write here some discription<br>ほげほげ",
+                    modalImages: [
+                        "img/Beast/Beast1.png",
+                        "img/Beast/Beast2.jpg",
+                        "img/Beast/Beast3.jpg",
+                        "img/Beast/Beast4.jpg",
+                        "img/Beast/Beast5.jpg",
+                        "img/Beast/Beast6.jpg"
+                    ],
+                    icons: [
+                        "img/icon/Maya.png",
+                        "img/icon/shogun.png",
+                        "img/icon/unity.png",
+                        "img/icon/substance-painter.png",
+                        "img/icon/Adobe_Photosho.png"
+                    ],
+                    video: "https://www.youtube.com/embed/3rQuoLY9BTI?si=HpudxufkVp5qQS9y"
+                },
+                //ugeChanmarch
+                {
+                    title: "杏戸ゆげ様 UGE CHAN MARCH 3Dプロップ製作",
+                    thumbnail: "img/uge chan march/uge chan march.png",
+                    discription: "write here some discription<br>ほげほげ",
+                    modalImages: [
+                        "img/uge chan march/uge chan march1.jpg",
+                        "img/uge chan march/uge chan march2.jpg",
+                        "img/uge chan march/uge chan march3.png",
+                        "img/uge chan march/uge chan march4.png",
+                        "img/uge chan march/uge chan march5.png",
+                        "img/uge chan march/uge chan march6.png",
+                        "img/uge chan march/uge chan march7.jpg",
+                        "img/uge chan march/uge chan march8.png",
+                        "img/uge chan march/uge chan march9.png",
+                        "img/uge chan march/uge chan march10.gif",
+                    ],
+                    icons: [
+                        "img/icon/Maya.png",
+                        "img/icon/shogun.png",
+                        "img/icon/unity.png",
+                        "img/icon/substance-painter.png",
+                        "img/icon/Adobe_Photosho.png"
+                    ],
+                    video: "https://www.youtube.com/embed/tgPK9TH76vE?si=yv3s8qFFuQYsymKo"
+                },
+                //シュガリリ2
+                {
+                    title: "SugarLylic様2ndMistery ライブ3D背景製作/デザイン",
+                    thumbnail: "img/SL/SL.png",
+                    discription: "write here some discription<br>ほげほげ",
+                    modalImages: [
+                        "img/SL/SL1.jpg",
+                        "img/SL/SL2.jpg",
+                        "img/SL/SL3.jpg",
+                        "img/SL/SL4.jpg",
+                        "img/SL/SL5.jpg",
+                        "img/SL/SL6.jpg",
+                        "img/SL/SL7.jpg",
+                        "img/SL/SL8.jpg",
+                        "img/SL/SL9.gif"
+                    ],
+                    icons: [
+                        "img/icon/Maya.png",
+                        "img/icon/shogun.png",
+                        "img/icon/unity.png",
+                        "img/icon/substance-painter.png",
+                        "img/icon/Adobe_Photosho.png"
+                    ],
+                    video: "https://www.youtube.com/embed/8gVN75emRWU?si=vm1MgOU15ixF7V-k"
+                },
+
+            ];
+
+            const container = document.getElementById('gallery-container');
+
+            galleryData.forEach((item, index) => {
+                const imageId = `image${index + 1}`;
+                const modalId = `myModal${index + 1}`;
+
+                const iconsHtml = item.icons.map(icon => `<img src="${icon}" class="small-image">`).join('');
+                const modalImgsHtml = item.modalImages.map(img => `<img src="${img}" alt="">`).join('');
+
+                if (item.video != "") {
+                    container.innerHTML += `
+                  <div class="image-item">
+                    <img src="${item.thumbnail}" alt="${item.title}" class="image" id="${imageId}">
+
+                    <div id="${modalId}" class="modal">
+                      <div class="modal-content">
+                        <span class="close">&times;</span>
+                        <h2 class="modal-title">${item.title}</h2>
+                        <div class="modal-description-container">
+                          <p class="modal-description">${item.discription}</p>
+                          <div class="small-images">${iconsHtml}</div>
+                        </div>
+                        <div class="link-img">
+                          <div class="video-container">
+                            <iframe src="${item.video}" title="${item.title}" frameborder="0" allowfullscreen></iframe>
+                          </div>
+                          ${modalImgsHtml}
+                        </div>
+                      </div>
                     </div>
-                </nav>
-            </div>
-        </div>
-    </div>
-</header>
-<div id="mainimg">
-    <div id="gallery-container"></div>
-
-    <script>
-      const galleryData = [
-        //召喚ショーケース
-        {
-          title: "尾丸ポルカ様 召喚ショーケース　3D背景製作/デザイン",
-          thumbnail: "img/Summon Showcase/Summon Showcase.png",
-          discription: "write here some discription<br>これで改行もされているはず",
-          modalImages: [
-            "img/Summon Showcase/Summon Showcase1.png",
-            "img/Summon Showcase/Summon Showcase2.jpg",
-            "img/Summon Showcase/Summon Showcase3.jpg",
-            "img/Summon Showcase/Summon Showcase4.png",
-            "img/Summon Showcase/Summon Showcase5.jpg"
-          ],
-          icons: [
-            "img/icon/Maya.png",
-            "img/icon/blender.png",
-            "img/icon/unity.png",
-            "img/icon/substance-painter.png",
-            "img/icon/Adobe_Photosho.png"
-          ],
-          video: "https://www.youtube.com/embed/R14Ns4REA_g?si=ftc6BxyUxAolQWsv"
-        },
-        //にゃんたTheEarth
-        {
-          title: "にゃんたじあ! 様 にゃんたtheEarth! 一部3D製作",
-            thumbnail: "img/NyantaTheEarth/NyantaTheEarth.png",
-          discription: "write here some discription<br>これで改行もされているはず",
-          modalImages: [
-            "img/NyantaTheEarth/NyantaTheEarth1.png",
-            "img/NyantaTheEarth/NyantaTheEarth2.png",
-            "img/NyantaTheEarth/NyantaTheEarth3.png",
-            "img/NyantaTheEarth/NyantaTheEarth4.png",
-            "img/NyantaTheEarth/NyantaTheEarth5.png"
-          ],
-          icons: [
-            "img/icon/blender.png",
-            "img/icon/substance-painter.png",
-            "img/icon/Adobe_Photosho.png"
-          ],
-            video: "https://www.youtube.com/embed/9SS5RfsSxEk?si=LKYWZlRTiqPiHQvK&amp;start=80"
-          },
-        //糸電話
-        {
-          title: "なとり 様 糸電話 アシスタントディレクター/一部着色担当",
-            thumbnail: "img/Itodenwa/Itodenwa.png",
-          discription: "write here some discription<br>これで改行もされているはず",
-          modalImages: [
-            "img/Itodenwa/Itodenwa1.png",
-            "img/Itodenwa/Itodenwa2.png",
-            "img/Itodenwa/Itodenwa3.png",
-            "img/Itodenwa/Itodenwa4.png"
-          ],
-          icons: [
-            "img/icon/Adobe_Photosho.png"
-          ],
-            video: "https://www.youtube.com/embed/d48uxNdIPHM?si=Z7Y-7QbC1Wi1hHNJ" 
-          },
-        //Precious
-        {
-          title: "シクフォニ 様 Precious 一部3D製作",
-            thumbnail: "img/Precious/Precious.png",
-          discription: "write here some discription<br>これで改行もされているはず",
-          modalImages: [
-            "img/Precious/Precious1.jpg",
-            "img/Precious/Precious2.jpg",
-            "img/Precious/Precious3.png",
-            "img/Precious/Precious4.png",
-            "img/Precious/Precious5.png",
-          ],
-          icons: [
-            "img/icon/blender.png",
-            "img/icon/substance-painter.png",
-          ],
-            video: "https://www.youtube.com/embed/WvW6NZiR1tc?si=9Knwma2oCPB9PkHn&amp;start=139"  
-          },
-        //劇場 BGV製作
-        {
-          title: "なとり様 1stONE-MAN LIVE 劇場 背景映像製作",
-            thumbnail: "img/Gekijou/Gekijou.png",
-          discription: "write here some discription<br>これで改行もされているはず",
-          modalImages: [
-             "img/Gekijou/Gekijou1.jpg",
-             "img/Gekijou/Gekijou2.png",
-             "img/Gekijou/Gekijou3.png",
-             "img/Gekijou/Gekijou4.png",
-              "img/Gekijou/Gekijou5.png",
-              "img/Gekijou/Gekijou6.jpg"
-          ],
-            icons: [
-                "img/icon/Maya.png",
-                "img/icon/blender.png",
-                "img/icon/substance-painter.png",
-                "img/icon/Adobe_Photosho.png"
-            ],
-            video:"https://www.youtube.com/embed/fQBWmlwO5p8?si=9KUgdVOQ5VG-i5WA"   
-          },
-        //すとぷり紅白
-        {
-          title: "すとぷり様 2023紅白歌合戦 モデル,表情調整/現場オペレーション",
-            thumbnail: "img/STPRKouhaku/STPRKouhaku.png",
-          discription: "権利の都合上、一般公開されている画像のみ掲載いたします。",
-          modalImages: [
-             "img/STPRKouhaku/STPRKouhaku1.jfif",
-          ],
-            icons: [
-                "img/icon/Maya.png",
-                "img/icon/shogun.png",
-                "img/icon/unity.png"
-            ],
-            video: "https://www.youtube.com/embed/IWHxRutOI04?si=hv-DqxuTK3O8-W-U" 
-          },
-        //すとふぁみ
-        {
-          title: "すとぷり様 ファンクラブ背景製作",
-          thumbnail: "img/Stfami/Stfami.png",
-          discription: "権利の都合上、一般公開されている画像のみ掲載いたします。",
-          modalImages: [
-                "img/Stfami/Stfami2.jpg",
-                "img/Stfami/Stfami3.jpg",
-                "img/Stfami/Stfami4.jpg",
-                "img/Stfami/Stfami5.jpg",
-                "img/Stfami/Stfami6.jpg",
-                "img/Stfami/Stfami7.jpg"
-          ],
-         icons: [
-                "img/icon/Maya.png",
-                "img/icon/shogun.png",
-                "img/icon/unity.png",
-                "img/icon/substance-painter.png",
-                "img/icon/Adobe_Photosho.png"
-         ],
-            video: "" 
-          },
-        //PropCam
-        {
-          title: "Mocapスタジオ用手持ちカメラ治具製作",
-          thumbnail: "img/PropCam/PropCam.png",
-          discription: "権利の都合上、一般公開されている画像のみ掲載いたします。",
-          modalImages: [
-                "img/PropCam/PropCam2.jpg",
-                "img/PropCam/PropCam3.jpg",
-                "img/PropCam/PropCam4.jpg",
-                "img/PropCam/PropCam5.jpg",
-                "img/PropCam/PropCam6.jpg",
-                "img/PropCam/PropCam7.png",
-                "img/PropCam/PropCam8.png"
-
-          ],
-         icons: [
-                "img/icon/Maya.png",
-                "img/icon/shogun.png",
-                "img/icon/unity.png",
-                "img/icon/substance-painter.png",
-                "img/icon/Adobe_Photosho.png"
-         ],
-            video: "" 
-          },
-        //ClubAxC
-        {
-            title: "AMPTAKxCOLORS様 Club A×C -歌舞伎町店-　背景製作",
-          thumbnail: "img/ClubAC/ClubAC.png",
-          discription: "権利の都合上、一般公開されている画像のみ掲載いたします。",
-          modalImages: [
-                "img/ClubAC/ClubAC2.jpg",
-                "img/ClubAC/ClubAC3.jpg",
-                "img/ClubAC/ClubAC4.png",
-                "img/ClubAC/ClubAC5.png"
-
-          ],
-         icons: [
-                "img/icon/Maya.png",
-                "img/icon/shogun.png",
-                "img/icon/unity.png",
-                "img/icon/substance-painter.png",
-                "img/icon/Adobe_Photosho.png"
-         ],
-            video: "https://www.youtube.com/embed/fRwpBn8ND5Y?si=nIdNtUJJnD8eNj1E"  
-          },
-        //OneWeekLove
-        {
-            title: "AMPTAKxCOLORS様 OneWeekLove　背景製作",
-            thumbnail: "img/OneWeekLove/OneWeekLove.png",
-          discription: "権利の都合上、一般公開されている画像のみ掲載いたします。",
-          modalImages: [
-                "img/OneWeekLove/OneWeekLove2.png",
-                "img/OneWeekLove/OneWeekLove3.png",
-                "img/OneWeekLove/OneWeekLove4.png",
-                "img/OneWeekLove/OneWeekLove5.png"
-
-          ],
-         icons: [
-                "img/icon/Maya.png",
-                "img/icon/shogun.png",
-                "img/icon/unity.png",
-                "img/icon/substance-painter.png",
-                "img/icon/Adobe_Photosho.png"
-         ],
-            video: "https://www.youtube.com/embed/_4vRHcBJQCg?si=2-zuDihRqMrBgkkb"
-          },
-        //KightGame
-        {
-            title: "騎士A 様 KightGame 一部CG製作",
-            thumbnail: "img/KightGame/KightGame.png",
-          discription: "権利の都合上、一般公開されている画像のみ掲載いたします。",
-          modalImages: [
-                "img/KightGame/KightGame2.png",
-                "img/KightGame/KightGame3.png",
-                "img/KightGame/KightGame4.png",
-                "img/KightGame/KightGame5.png",
-                "img/KightGame/KightGame6.png"
-
-          ],
-         icons: [
-                "img/icon/Maya.png",
-                "img/icon/shogun.png",
-                "img/icon/unity.png",
-                "img/icon/substance-painter.png",
-                "img/icon/Adobe_Photosho.png"
-         ],
-            video: "https://www.youtube.com/embed/SSPOiDCBBEc?si=-LyO89T-dewV3yao" 
-          },
-        //すとぷりくえすと
-        {
-            title: "すとぷり様　すとぷりくえすとっ 背景一部制作/調整",
-            thumbnail: "img/STPRQuest/STPRQuest.png",
-          discription: "権利の都合上、一般公開されている画像のみ掲載いたします。",
-          modalImages: [
-                "img/STPRQuest/STPRQuest2.jpg",
-                "img/STPRQuest/STPRQuest3.jpg",
-                "img/STPRQuest/STPRQuest4.jpg",
-                "img/STPRQuest/STPRQuest5.jpg",
-                "img/STPRQuest/STPRQuest6.jpg"
-
-          ],
-         icons: [
-                "img/icon/Maya.png",
-                "img/icon/shogun.png",
-                "img/icon/unity.png",
-                "img/icon/substance-painter.png",
-                "img/icon/Adobe_Photosho.png"
-         ],
-            video: "https://www.youtube.com/embed/7NE5zyNjjFA?si=z0AbOpch1Z358U7I&amp;start=510"  
-          },
-        //すとぷりHWG
-        {
-            title: "すとぷり様　すとぷりのHereWeGo!! 背景一部制作/調整",
-            thumbnail: "img/HereWeGo/HereWeGo.png",
-          discription: "権利の都合上、一般公開されている画像のみ掲載いたします。",
-          modalImages: [
-                "img/HereWeGo/HereWeGo2.jpg",
-                "img/HereWeGo/HereWeGo3.jpg",
-                "img/HereWeGo/HereWeGo4.jpg",
-                "img/HereWeGo/HereWeGo5.png",
-                "img/HereWeGo/HereWeGo6.png",
-                "img/HereWeGo/HereWeGo7.png",
-
-
-          ],
-         icons: [
-                "img/icon/Maya.png",
-                "img/icon/shogun.png",
-                "img/icon/unity.png",
-                "img/icon/substance-painter.png",
-                "img/icon/Adobe_Photosho.png"
-         ],
-            video: "https://www.youtube.com/embed/PIAgPNR5ENU?si=7lGNldr7K9bIm4My"  
-          },
-        //Hollow
-        {
-            title: "higma＆gaburyu - ホロウ 背景一部制作",
-            thumbnail: "img/Hollow/Hollow.png",
-          discription: "権利の都合上、一般公開されている画像のみ掲載いたします。",
-          modalImages: [
-                "img/Hollow/Hollow1.png",
-                "img/Hollow/Hollow2.png",
-                "img/Hollow/Hollow3.png",
-                "img/Hollow/Hollow4.png",
-                "img/Hollow/Hollow5.png",
-
-
-          ],
-         icons: [
-                "img/icon/Maya.png",
-                "img/icon/shogun.png",
-                "img/icon/unity.png",
-                "img/icon/substance-painter.png",
-                "img/icon/Adobe_Photosho.png"
-         ],
-            video: "https://www.youtube.com/embed/iTKM_3mdBsM?si=bGMc6Hu26nwjL1IY"
-        },
-        //Beast
-        {
-          title: "天開司様 Beast 3D背景製作/デザイン",
-          thumbnail: "img/Beast/Beast.png",
-          discription: "write here some discription<br>ほげほげ",
-          modalImages: [
-            "img/Beast/Beast1.png",
-            "img/Beast/Beast2.jpg",
-            "img/Beast/Beast3.jpg",
-            "img/Beast/Beast4.jpg",
-            "img/Beast/Beast5.jpg",
-            "img/Beast/Beast6.jpg"
-          ],
-          icons: [
-            "img/icon/Maya.png",
-            "img/icon/shogun.png",
-            "img/icon/unity.png",
-            "img/icon/substance-painter.png",
-            "img/icon/Adobe_Photosho.png"
-          ],
-          video: "https://www.youtube.com/embed/3rQuoLY9BTI?si=HpudxufkVp5qQS9y"
-        }
-      ];
-    
-      const container = document.getElementById('gallery-container');
-    
-      galleryData.forEach((item, index) => {
-        const imageId = `image${index + 1}`;
-        const modalId = `myModal${index + 1}`;
-    
-        const iconsHtml = item.icons.map(icon => `<img src="${icon}" class="small-image">`).join('');
-        const modalImgsHtml = item.modalImages.map(img => `<img src="${img}" alt="">`).join('');
-
-          if (item.video != "") {
-              container.innerHTML += `
+                  </div>
+                `;
+                } else {
+                    container.innerHTML += `
           <div class="image-item">
             <img src="${item.thumbnail}" alt="${item.title}" class="image" id="${imageId}">
-            
+
             <div id="${modalId}" class="modal">
               <div class="modal-content">
                 <span class="close">&times;</span>
@@ -380,51 +455,28 @@
                   <div class="small-images">${iconsHtml}</div>
                 </div>
                 <div class="link-img">
-                  <div class="video-container">
-                    <iframe src="${item.video}" title="${item.title}" frameborder="0" allowfullscreen></iframe>
-                  </div>
                   ${modalImgsHtml}
                 </div>
               </div>
             </div>
           </div>
-        `;
-          } else {
-              container.innerHTML += `
-  <div class="image-item">
-    <img src="${item.thumbnail}" alt="${item.title}" class="image" id="${imageId}">
-    
-    <div id="${modalId}" class="modal">
-      <div class="modal-content">
-        <span class="close">&times;</span>
-        <h2 class="modal-title">${item.title}</h2>
-        <div class="modal-description-container">
-          <p class="modal-description">${item.discription}</p>
-          <div class="small-images">${iconsHtml}</div>
-        </div>
-        <div class="link-img">
-          ${modalImgsHtml}
-        </div>
-      </div>
-    </div>
-  </div>
 `;
-          }
-    
-        // イベント追加（あとでまとめて追加するやり方も可）
-        setTimeout(() => {
-          document.getElementById(imageId).addEventListener('click', () => {
-            document.getElementById(modalId).style.display = 'block';
-          });
-    
-          document.querySelector(`#${modalId} .close`).addEventListener('click', () => {
-            document.getElementById(modalId).style.display = 'none';
-          });
-        }, 0);
-      });
-    </script>
-</div>
-<p id="pagetop"><a href="#">TOP</a></p>
+                }
+
+                // イベント追加（あとでまとめて追加するやり方も可）
+                setTimeout(() => {
+                    document.getElementById(imageId).addEventListener('click', () => {
+                        document.getElementById(modalId).style.display = 'block';
+                    });
+
+                    document.querySelector(`#${modalId} .close`).addEventListener('click', () => {
+                        document.getElementById(modalId).style.display = 'none';
+                    });
+                }, 0);
+            });
+        </script>
+    </div>
+    <p id="pagetop"><a href="#">TOP</a></p>
 </body>
 <script src="js/s.js"></script>
 </html>
