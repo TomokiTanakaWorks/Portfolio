@@ -5,6 +5,54 @@
     <title>Tanaka Tomoki - Portfolio</title>
     <link rel="stylesheet" media="all" href="css/ress.min.css" />
     <link rel="stylesheet" media="all" href="css/style.css" />
+    <style>
+        html, body.modal-open {
+          overflow: hidden;
+          height: 100%;
+        }
+        /* 背景色 */
+         body {
+            background-color: #f1eceb; /* 背景色を薄いピンクベージュに */
+        }
+
+        /* 同意・同意しないボタン 共通スタイル */
+        #agreeButton, #disagreeButton {
+            padding: 10px 20px;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border-radius: 5px;
+        }
+
+        /* 同意ボタン */
+        #agreeButton {
+            background-color: #363427; /* ボタンを濃いグレーに */
+            color: #f1eceb;
+        }
+        #agreeButton:hover {
+            background-color: #627962; /* ホバー時は薄いオリーブグリーンに */
+            transform: scale(1.05);
+        }
+
+        /* 同意しないボタン */
+        #disagreeButton {
+            background-color: #363427; /* 同様にボタンを濃いグレーに */
+            color: #f1eceb;
+            margin-left: 10px;
+        }
+        #disagreeButton:hover {
+            background-color: #627962; /* ホバー時にオリーブグリーンに */
+            transform: scale(1.05);
+        }
+        .mo h2{
+            text-align: center;
+        }
+        .mo p{
+            text-align: left;
+        }
+
+      </style>
     <script src="js/jquery-3.6.0.min.js"></script>
     <script src="js/style.js"></script>
 
@@ -13,6 +61,24 @@
 
 </head>
 <body id="home">
+
+    <!-- ここに免責事項モーダルを追加 -->
+    <div class="modal" id="disclaimerModal" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.7); justify-content:center; align-items:center; z-index:9999;">
+        <div id="mo" style="background:#f1eceb; color: #363427; font-size: 14px; padding:30px; border-radius:10px; max-width:600px;">
+            <h2>免責事項</h2>
+            <p>本ポートフォリオに掲載されている3Dモデル、画像、映像、およびその他関連データは、私（田中友貴）が個人のスキルを示す目的で制作または編集したものです。<br>掲載内容の一部には、学習目的や非営利利用を前提とした既存の参考資料、コンセプトアート、商業作品の二次創作が含まれている場合があります。これらの権利はそれぞれの著作権所有者に帰属します。</p>
+            <p>また、企業に所属していた際の職務上で制作した実績も一部含まれており、それらに関する著作権は各所属企業に帰属しています。<br>これらの制作物は、<strong>就職活動など限定的かつ非営利の目的に限り、特例として掲載の許可をいただいているものです。</strong></p>
+            <p>なお、各作品における私の担当範囲は「3Dモデリング」「ライティング」等であり、ポートフォリオに掲載している画像の中には、コンポジット処理（合成や後処理）を施した後のものも含まれています。<br>最終的なビジュアル表現は一部、プロジェクトの要件に応じて調整されている場合があることを予めご承知おきください。</p>
+            <p><strong>本ポートフォリオは採用選考や業務提案などの評価目的のみに使用され、商業利用や第三者への再配布は一切許可されておりません。</strong>不適切な使用が判明した場合、然るべき対応を取らせていただく可能性があります。<br>
+                ご不明な点や掲載内容に関するお問い合わせがございましたら、お手数ですがご連絡いただけますと幸いです。</p>
+            <h2>【ご案内】</h2>
+            <p>上記の内容をご確認のうえ、同意いただける場合は、以下の同意するボタンを押してください。<br>
+                同意いただいた方のみ、ポートフォリオのメインページへ進むことができます。</p>
+            <button id="agreeButton" style="margin:10px; padding:10px 20px;">同意する</button>
+            <button id="disagreeButton" style="margin:10px; padding:10px 20px;">同意しない</button>
+        </div>
+    </div>
+
     <header>
         <div class="container">
             <div class="row">
@@ -592,7 +658,7 @@
               </div>
             </div>
           </div>
-`;
+            `;
                 }
 
                 // イベント追加（あとでまとめて追加するやり方も可）
@@ -611,4 +677,32 @@
     <p id="pagetop"><a href="#">TOP</a></p>
 </body>
 <script src="js/s.js"></script>
+<!-- 免責事項用のスクリプト追加 -->
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const modal = document.getElementById('disclaimerModal');
+      const agreeButton = document.getElementById('agreeButton');
+      const disagreeButton = document.getElementById('disagreeButton');
+  
+      if (localStorage.getItem('disclaimerAgreed') === 'true') {
+        modal.style.display = 'none';
+      } else {
+        modal.style.display = 'flex';
+        document.body.classList.add('modal-open'); // モーダル出たらスクロール禁止！
+      }
+  
+      agreeButton.onclick = function() {
+        localStorage.setItem('disclaimerAgreed', 'true');
+        modal.style.display = 'none';
+        document.body.classList.remove('modal-open'); // 同意したらスクロールOKに戻す！
+      }
+  
+      disagreeButton.onclick = function() {
+        alert('ご利用いただけません。トップページに戻ります。');
+        window.location.href = 'https://www.google.com/'; // 好きなURLに変えてOK
+      }
+    });
+  </script>
+  
+  
 </html>
