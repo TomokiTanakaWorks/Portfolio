@@ -45,34 +45,27 @@
             background-color: #627962; /* ホバー時にオリーブグリーンに */
             transform: scale(1.05);
         }
-        .mo h2{
-            text-align: center;
-        }
-        .mo p{
-            text-align: left;
-        }
         #disclaimerModal {
-  position: fixed;         /* 画面に固定する */
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5); /* 背景を半透明の黒にする */
-  display: flex;           /* 中央寄せするためflex使う */
-  align-items: center;     /* 上下中央揃え */
-  justify-content: center; /* 左右中央揃え */
-  z-index: 9999;           /* 他の要素より前に出す */
-}
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            display: flex;
+            align-items: center !important;
+            justify-content: center !important;
+            z-index: 9999;
+        }
+        #disclaimerModal .disclaimer-content {
+            background: #fff;
+            padding: 40px;
+            border-radius: 10px;
+            max-width: 600px;
+            width: 90%;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+        }
 
-/* モーダル内の本体部分 */
-#disclaimerModal .modal-content {
-  background: #fff;        /* 中身は白 */
-  padding: 40px;           /* 内側の余白 */
-  border-radius: 10px;     /* 角を丸く */
-  max-width: 600px;        /* 幅制限 */
-  width: 90%;              /* スマホでも対応できるよう幅90% */
-  box-shadow: 0 4px 20px rgba(0,0,0,0.2); /* ふんわり影 */
-}
 
 
       </style>
@@ -86,8 +79,8 @@
 <body id="home">
 
     <!-- ここに免責事項モーダルを追加 -->
-    <div class="modal" id="disclaimerModal">
-        <div id="mo" style="background:#f1eceb; color: #363427; font-size: 14px; padding:30px; border-radius:10px; max-width:600px;">
+    <div id="disclaimerModal" class="modal">
+        <div class="disclaimer-content" style="background:#f1eceb; color: #363427; font-size: 14px;">
             <h2>免責事項</h2>
             <p>本ポートフォリオに掲載されている3Dモデル、画像、映像、およびその他関連データは、私（田中友貴）が個人のスキルを示す目的で制作または編集したものです。<br>掲載内容の一部には、学習目的や非営利利用を前提とした既存の参考資料、コンセプトアート、商業作品の二次創作が含まれている場合があります。これらの権利はそれぞれの著作権所有者に帰属します。</p>
             <p>また、企業に所属していた際の職務上で制作した実績も一部含まれており、それらに関する著作権は各所属企業に帰属しています。<br>これらの制作物は、<strong>就職活動など限定的かつ非営利の目的に限り、特例として掲載の許可をいただいているものです。</strong></p>
@@ -703,21 +696,18 @@
 <!-- 免責事項用のスクリプト追加 -->
 <script>
     document.addEventListener('DOMContentLoaded', function () {
-  // 🔥 ページ読み込み時に強制的に no-scroll を解除
-  document.body.classList.remove('no-scroll');
-  document.documentElement.style.overflow = 'auto';
-  document.body.style.overflow = 'auto';
-
   const disclaimerModal = document.getElementById('disclaimerModal');
   const agreeButton = document.getElementById('agreeButton');
   const disagreeButton = document.getElementById('disagreeButton');
 
-  const FORCE_SHOW_MODAL = true; // ここでモーダルを強制表示するか選ぶ
+  // localStorageに同意したかどうかの記録を見る
+  const hasAgreed = localStorage.getItem('disclaimerAgreed') === 'true';
 
-  // モーダルを表示する条件
-  if (!localStorage.getItem('disclaimerAgreed') || FORCE_SHOW_MODAL) {
-    disclaimerModal.style.display = 'block';
-    document.body.classList.add('no-scroll'); // モーダル出すときだけno-scrollを付ける
+  if (!hasAgreed) {
+    disclaimerModal.style.display = 'flex';
+    document.body.classList.add('no-scroll');
+    document.documentElement.style.overflow = 'hidden';
+    document.body.style.overflow = 'hidden';
   }
 
   agreeButton.addEventListener('click', function () {
@@ -733,7 +723,7 @@
     window.location.href = 'https://www.google.com';
   });
 });
-
-  </script>
+</script>
+    
   
 </html>
