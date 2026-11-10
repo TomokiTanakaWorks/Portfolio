@@ -1,61 +1,42 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ja">
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Tanaka Tomoki - Portfolio</title>
-<link rel="stylesheet" media="all" href="css/ress.min.css" />
-<link rel="stylesheet" media="all" href="css/style.css" />
-<script src="js/jquery-3.6.0.min.js"></script>
-<script src="js/style.js"></script>
-
-<!-- Favicon -->
-<link rel="icon" type="image/png" href="img/favicon.png">
-
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#0b1117">
+<meta name="description" content="田中友貴のプロフィール、制作経歴と使用ツール。">
+<meta property="og:type" content="website">
+<meta property="og:title" content="About | Tomoki Tanaka">
+<meta property="og:description" content="田中友貴のプロフィール、制作経歴と使用ツール。">
+<title>About | Tomoki Tanaka</title>
+<link rel="icon" type="image/png" href="./img/favicon.png">
+<link rel="stylesheet" href="./css/portfolio.css">
 </head>
-<body id="about">
-<header>    
-    <div class="container">
-        <div class="row">
-            <div class="col span-12">
-                <div class="head">
-                    <a href="index.html"><h1>Tanaka Tomoki - Portfolio</h1></a>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col span-12">
-                <nav>
-                    <div id="open"></div>
-                    <div id="close"></div>    
-                    <div id="navi">
-                        <ul>
-                            <li id="nav_home"><a href="index.html">Home</a></li>
-                            <li id="nav_about"><a href="about.html">About</a></li>
-                            <li id="nav_contact"><a href="contact.html">Contact</a></li>
-                        </ul>
-                    </div>
-                </nav>
-            </div>
-        </div>
-    </div>
+<body data-page="about">
+<a class="skip-link" href="#main">メインコンテンツへ</a>
+<header class="site-header">
+<div class="container header-inner">
+  <a href="./index.html" class="identity" aria-label="Tomoki Tanakaのトップページ"><strong>TT<span class="mint">.</span></strong><span> TOMOKI TANAKA <small>3D ART / DIRECTION</small></span></a>
+  <nav aria-label="メインメニュー" class="navigation">
+    <a href="./index.html" data-nav="works">WORKS</a>
+    <a href="./about.html" data-nav="about">ABOUT</a>
+    <a href="./contact.html" data-nav="contact">CONTACT</a>
+  </nav>
+</div>
 </header>
-<div id="mainpro">
-    <div id="profileimg">
-        <img src="img/tomoki-image.jpg" alt="">
-    </div>
-    <div id="name">
-        <h1>田中 友貴</h1><p>Tanaka Tomoki</p>
-    </div>
-    <div id="ago">
-        <p>1999年生まれ<br><span id="age"></span>歳</p>
-    </div>
-    <div id="introduction">
+<main id="main">
+<section class="page-hero container"><p class="overline">01 / ABOUT</p><h1>BEYOND<br><span class="stroke">THE RENDER.</span></h1><p class="page-sub">3D ARTIST / ART DIRECTOR<br>想像を、実際に動く世界へ。</p></section>
+<section class="profile container">
+<div class="portrait"><img src="./img/tomoki-image.jpg" data-optimize loading="lazy" decoding="async" alt="田中友貴のポートレート"><p>TOMOKI TANAKA / JAPAN</p></div>
+<div class="profile-main"><p class="overline">BIOGRAPHY / PROFILE</p><h2>田中 友貴<span>Tomoki Tanaka</span></h2><p class="birth">1999年生まれ / <span id="age"></span>歳</p>
+<p class="profile-now">3DCGアーティストとして積み重ねた経験を軸に、ゲーム開発におけるアートディレクションにも携わっています。</p>
+<div class="old-biography"><h3>BACKGROUND <small>ORIGINAL BIOGRAPHY</small></h3>
         <p>高校在学中、友人とゲーム制作コンテストに出場し、受賞した事をきっかけにエンタメ業界を志しました。</p>
         <p>バンタンゲームアカデミー卒業後、3DCGアーティストとしてVtuberのリアルタイムライブに関わっております。</p>
         <p>デザインからモデリング、Unityでのイベント設定やルック調整などの制作を主としつつ、モーションキャプチャスタジオではVicon(Shogun)のオペレーションを担当。</p>
     </div>
-</div>
-<div id="app-container">
+</div></section>
+<section class="tools-section"><div class="container"><div class="section-head"><div><p class="overline">02 / TOOLKIT</p><h2>Tools &amp; <em>skills.</em></h2></div><p>過去のサイトに掲載した使用ツールを引き継いでいます。<br>使用年数は当時の記録です。</p></div><div id="app-container" class="tools-grid">
     <div class="app-item">
         <img src="img/icon/unity.png" alt="" class="app-icon">
         <div class="app-info">
@@ -133,9 +114,8 @@
             <p>使用年数: 1年</p>
         </div>
     </div>
-</div>
-<p id="pagetop"><a href="#">TOP</a></p>
-<!-- 外部JavaScriptファイルを読み込む -->
-<script src="js/age.js"></script>
-</body>
-</html>
+</div></div></section>
+<section class="cta"><div class="container cta-inner"><div><p class="overline">03 / NEXT PROJECT</p><h2>LET'S<br><em>CONNECT.</em></h2></div><a class="circle-arrow" href="./contact.html" aria-label="問い合わせページへ">↗</a></div></section>
+</main>
+<footer class="footer"><div class="container footer-grid"><div><a href="./index.html" class="footer-name">TOMOKI TANAKA<span class="mint">.</span></a><p>DESIGN / 3D ART / CREATIVE DIRECTION</p></div><nav aria-label="フッターナビゲーション"><a href="./index.html">WORKS</a><a href="./about.html">ABOUT</a><a href="./contact.html">CONTACT</a><a href="https://github.com/TomokiTanakaWorks" target="_blank" rel="noopener noreferrer">GITHUB ↗</a></nav><small>© <span data-year>2026</span> TOMOKI TANAKA</small></div></footer>
+<script defer src="./js/site.js"></script><script defer src="./js/age.js"></script></body></html>
