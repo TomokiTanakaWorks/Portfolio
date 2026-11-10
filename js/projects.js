@@ -1,0 +1,517 @@
+/* All 24 original entries and legacy keys retained. */
+window.portfolioProjects = [
+                //めちゃ恋らんまん
+                {
+                    title: "栗駒こまる様 MV「メチャ恋らんまん☆」一部3D背景製作",
+                    thumbnail: "img/Mechakoi//Mechakoi.jpg",
+                    discription: "【製作期間】 <br> 2025年3月～<br><br> みくに(392)(@mikuni392jp)様より委託していただき製作した案件になります。<br>教室3D背景製作、一部アセットを使用しております。",
+                    modalImages: [
+                        "img/Mechakoi/Mechakoi1.png",
+                        "img/Mechakoi/Mechakoi2.png",
+                        "img/Mechakoi/Mechakoi3.png",
+                        "img/Mechakoi/Mechakoi4.png"
+                    ],
+                    icons: [
+
+                        "img/icon/blender.png",
+                        "img/icon/substance-painter.png",
+                        "img/icon/Adobe_Photosho.png"
+                    ],
+                    video: "https://www.youtube.com/embed/R0DYwL1eEcs?si=DnoDQHNvINz1QFe8"
+                },
+                //召喚ショーケース
+                {
+                    title: "尾丸ポルカ様 MV「召喚ショーケース」3D背景製作/一部デザイン",
+                    thumbnail: "img/Summon Showcase/Summon Showcase.png",
+                    discription: "【製作期間】 <br> 2024年11月～2025年1月<br><br> 深山詠美(@fukayama_emi)様より委託していただき製作した案件になります。<br>ライブステージはフルスクラッチ。街、森シーンはアセット使用で製作しております。",
+                    modalImages: [
+                        "img/Summon Showcase/Summon Showcase1.png",
+                        "img/Summon Showcase/Summon Showcase2.jpg",
+                        "img/Summon Showcase/Summon Showcase3.jpg",
+                        "img/Summon Showcase/Summon Showcase4.png",
+                        "img/Summon Showcase/Summon Showcase5.jpg"
+                    ],
+                    icons: [
+                        "img/icon/Maya.png",
+                        "img/icon/blender.png",
+                        "img/icon/unity.png",
+                        "img/icon/substance-painter.png",
+                        "img/icon/Adobe_Photosho.png"
+                    ],
+                    video: "https://www.youtube.com/embed/R14Ns4REA_g?si=ftc6BxyUxAolQWsv"
+                },
+                //にゃんたTheEarth
+                {
+                    title: "にゃんたじあ! 様 にゃんたtheEarth! 一部3D製作",
+                    thumbnail: "img/NyantaTheEarth/NyantaTheEarth.png",
+                    discription: "【製作期間】 <br> 2024年1月<br><br> みくに(392)(@mikuni392jp)様より委託していただき製作した案件になります。<br>地球のプロップデザイン,3D製作を担当いたしました。",
+                    modalImages: [
+                        "img/NyantaTheEarth/NyantaTheEarth1.png",
+                        "img/NyantaTheEarth/NyantaTheEarth2.png",
+                        "img/NyantaTheEarth/NyantaTheEarth3.png",
+                        "img/NyantaTheEarth/NyantaTheEarth4.png",
+                        "img/NyantaTheEarth/NyantaTheEarth5.png"
+                    ],
+                    icons: [
+                        "img/icon/blender.png",
+                        "img/icon/substance-painter.png",
+                        "img/icon/Adobe_Photosho.png"
+                    ],
+                    video: "https://www.youtube.com/embed/9SS5RfsSxEk?si=LKYWZlRTiqPiHQvK&amp;start=80"
+                },
+                //糸電話
+                {
+                    title: "なとり 様 糸電話 アシスタントディレクター/一部着色担当",
+                    thumbnail: "img/Itodenwa/Itodenwa.png",
+                    discription: "【製作期間】 <br> 2024年7月～2024年9月<br><br> 深山詠美(@fukayama_emi)様より委託していただき制作進行、ADとして関わらせて頂きました。<br>一部着色作業も担当しております。",
+                    modalImages: [
+                        "img/Itodenwa/Itodenwa1.png",
+                        "img/Itodenwa/Itodenwa2.png",
+                        "img/Itodenwa/Itodenwa3.png",
+                        "img/Itodenwa/Itodenwa4.png"
+                    ],
+                    icons: [
+                        "img/icon/Adobe_Photosho.png"
+                    ],
+                    video: "https://www.youtube.com/embed/d48uxNdIPHM?si=Z7Y-7QbC1Wi1hHNJ"
+                },
+                //Precious
+                {
+                    title: "シクフォニ 様 Precious 一部3D製作",
+                    thumbnail: "img/Precious/Precious.png",
+                    discription: "【製作期間】 <br> 2024年6月<br><br> みくに(392)(@mikuni392jp)様より委託していただき製作した案件になります。<br>宝石のような星のプロップデザイン,3D製作を担当いたしました。",
+                    modalImages: [
+                        "img/Precious/Precious1.jpg",
+                        "img/Precious/Precious2.jpg",
+                        "img/Precious/Precious3.png",
+                        "img/Precious/Precious4.png",
+                        "img/Precious/Precious5.png",
+                    ],
+                    icons: [
+                        "img/icon/blender.png",
+                        "img/icon/substance-painter.png",
+                    ],
+                    video: "https://www.youtube.com/embed/WvW6NZiR1tc?si=9Knwma2oCPB9PkHn&amp;start=139"
+                },
+                //劇場 BGV製作
+                {
+                    title: "なとり様 1stONE-MAN LIVE 劇場 背景映像製作",
+                    thumbnail: "img/Gekijou/Gekijou.png",
+                    discription: "【製作期間】 <br> 2024年2月～2024年4月<br><br> 深山詠美(@fukayama_emi)様より委託していただき製作した案件になります。<br>「フライデーナイト」「猿芝居」の二曲を担当いたしました。<br>権利関係の都合上、実際の動画は公開されておりませんので該当ライブの別曲を掲載いたします。",
+                    modalImages: [
+                        "img/Gekijou/Gekijou1.jpg",
+                        "img/Gekijou/Gekijou2.png",
+                        "img/Gekijou/Gekijou3.png",
+                        "img/Gekijou/Gekijou4.png",
+                        "img/Gekijou/Gekijou5.png",
+                        "img/Gekijou/Gekijou6.jpg"
+                    ],
+                    icons: [
+                        "img/icon/Maya.png",
+                        "img/icon/blender.png",
+                        "img/icon/substance-painter.png",
+                        "img/icon/Adobe_Photosho.png"
+                    ],
+                    video: "https://www.youtube.com/embed/fQBWmlwO5p8?si=9KUgdVOQ5VG-i5WA"
+                },
+                //すとぷり紅白
+                {
+                    title: "すとぷり様 2023紅白歌合戦 モデル,表情調整/現場オペレーション",
+                    thumbnail: "img/STPRKouhaku/STPRKouhaku.png",
+                    discription: "【製作期間】 <br> 2023年10月～2023年12月<br><br>株式会社STPR在籍中の製作物です。<br>3Dモデルの外注先への技術的ディレクション及び一部調整。当日のVICONオペレーション等担当いたしました。",
+                    modalImages: [
+                        "img/STPRKouhaku/STPRKouhaku1.jfif",
+                    ],
+                    icons: [
+                        "img/icon/Maya.png",
+                        "img/icon/shogun.png",
+                        "img/icon/unity.png"
+                    ],
+                    video: "https://www.youtube.com/embed/IWHxRutOI04?si=hv-DqxuTK3O8-W-U"
+                },
+                //もりうさ
+                {
+                    title: "ななもり様 もりうさ モデル製作",
+                    thumbnail: "img/moriusa/moriusa.png",
+                   discription: "【製作期間】 <br> 2023年7月～2023年8月<br><br>株式会社STPR在籍中の製作物です。<br>「もりうさ」モデリング～スキニング,リギング通してワンオペで製作しております。",
+                    modalImages: [
+                        "img/moriusa/moriusa1.png",
+                        "img/moriusa/moriusa2.png",
+                        "img/moriusa/moriusa3.png",
+                        "img/moriusa/moriusa4.gif",
+                        "img/moriusa/moriusa5.gif",
+                    ],
+                    icons: [
+                        "img/icon/Maya.png",
+                        "img/icon/shogun.png",
+                        "img/icon/unity.png"
+                    ],
+                    video: "https://www.youtube.com/embed/KQZSTgQBRL8?si=hTcuP87UqvOfFN0y" 
+                },
+                //すとふぁみ
+                {
+                    title: "すとぷり様 ファンクラブ背景モデル製作/デザイン",
+                    thumbnail: "img/Stfami/Stfami.png",
+                    discription: "【製作期間】 <br> 2023年6月～2023年7月<br><br>株式会社STPR在籍中の製作物です。<br>ファンクラブ「すとふぁみ」撮影用背景のデザイン～モデリングを担当いたしました。<br>棚の中身の本等、一部アセットを使用しております。",
+                    modalImages: [
+                        "img/Stfami/Stfami2.jpg",
+                        "img/Stfami/Stfami3.jpg",
+                        "img/Stfami/Stfami4.jpg",
+                        "img/Stfami/Stfami5.jpg",
+                        "img/Stfami/Stfami6.jpg",
+                        "img/Stfami/Stfami7.jpg"
+                    ],
+                    icons: [
+                        "img/icon/Maya.png",
+                        "img/icon/shogun.png",
+                        "img/icon/unity.png",
+                        "img/icon/substance-painter.png",
+                        "img/icon/Adobe_Photosho.png"
+                    ],
+                    video: ""
+                },
+                //PropCam
+                {
+                    title: "Mocapスタジオ用手持ちカメラ治具製作",
+                    thumbnail: "img/PropCam/PropCam.png",
+                    discription: "【製作期間】 <br> 2023年11月<br><br>株式会社STPR在籍中の製作物です。<br>VICONスタジオ用バーチャルカメラの治具を製作いたしました。<br>Fusion360にて設計、3DプリントしてMネジと再帰反射テープで製作しております。",
+                    modalImages: [
+                        "img/PropCam/PropCam2.jpg",
+                        "img/PropCam/PropCam3.jpg",
+                        "img/PropCam/PropCam4.jpg",
+                        "img/PropCam/PropCam5.jpg",
+                        "img/PropCam/PropCam6.jpg",
+                        "img/PropCam/PropCam7.png",
+                        "img/PropCam/PropCam8.png"
+
+                    ],
+                    icons: [
+                        "img/icon/shogun.png"
+                    ],
+                    video: ""
+                },
+                //ClubAxC
+                {
+                    title: "AMPTAKxCOLORS様 Club A×C -歌舞伎町店-　背景製作",
+                    thumbnail: "img/ClubAC/ClubAC.png",
+                    discription: "【製作期間】 <br> 2023年1月～2023年2月<br><br>株式会社STPR在籍中の製作物です。<br>一部アセットを使用し、背景素材を製作いたしました。",
+                    modalImages: [
+                        "img/ClubAC/ClubAC2.jpg",
+                        "img/ClubAC/ClubAC3.jpg",
+                        "img/ClubAC/ClubAC4.png",
+                        "img/ClubAC/ClubAC5.png"
+
+                    ],
+                    icons: [
+                        "img/icon/Maya.png",
+                        "img/icon/blender.png",
+                        "img/icon/unity.png",
+                        "img/icon/substance-painter.png",
+                        "img/icon/Adobe_Photosho.png"
+                    ],
+                    video: "https://www.youtube.com/embed/fRwpBn8ND5Y?si=nIdNtUJJnD8eNj1E"
+                },
+                //OneWeekLove
+                {
+                    title: "AMPTAKxCOLORS様 OneWeekLove　背景製作",
+                    thumbnail: "img/OneWeekLove/OneWeekLove.png",
+                    discription: "【製作期間】 <br> 2022年12月<br><br>株式会社STPR在籍中の製作物です。<br>ライブステージ風背景素材をフルスクラッチで製作いたしました。",
+                    modalImages: [
+                        "img/OneWeekLove/OneWeekLove2.png",
+                        "img/OneWeekLove/OneWeekLove3.png",
+                        "img/OneWeekLove/OneWeekLove4.png",
+                        "img/OneWeekLove/OneWeekLove5.png"
+
+                    ],
+                    icons: [
+                        "img/icon/Maya.png",
+                        "img/icon/blender.png",
+                        "img/icon/unity.png",
+                        "img/icon/substance-painter.png",
+                        "img/icon/Adobe_Photosho.png"
+                    ],
+                    video: "https://www.youtube.com/embed/_4vRHcBJQCg?si=2-zuDihRqMrBgkkb"
+                },
+                //KightGame
+                {
+                    title: "騎士A 様 KightGame 一部CG製作",
+                    thumbnail: "img/KightGame/KightGame.png",
+                    discription: "【製作期間】 <br> 2022年12月<br><br>株式会社STPR在籍中の製作物です。<br>インサートシーン、プロップを製作いたしました。野球場等一部アセットを使用しております。",      
+                    modalImages: [
+                        "img/KightGame/KightGame2.png",
+                        "img/KightGame/KightGame3.png",
+                        "img/KightGame/KightGame4.png",
+                        "img/KightGame/KightGame5.png",
+                        "img/KightGame/KightGame6.png"
+
+                    ],
+                    icons: [
+                        "img/icon/Maya.png",
+                        "img/icon/blender.png",
+                        "img/icon/unity.png",
+                        "img/icon/substance-painter.png",
+                        "img/icon/Adobe_Photosho.png"
+                    ],
+                    video: "https://www.youtube.com/embed/SSPOiDCBBEc?si=-LyO89T-dewV3yao"
+                },
+                //すとぷりくえすと
+                {
+                    title: "すとぷり様　すとぷりくえすとっ 背景一部制作/調整",
+                    thumbnail: "img/STPRQuest/STPRQuest.png",
+                    discription: "【製作期間】 <br> 2023年1月～2023年3月<br><br>株式会社STPR在籍中の製作物です。<br>スタジオ用CADデータをリアルタイム用にリメッシュ<br>UVからテクスチャベイク等行い、ライティングまで担当いたしました。",
+                    modalImages: [
+                        "img/STPRQuest/STPRQuest2.jpg",
+                        "img/STPRQuest/STPRQuest3.jpg",
+                        "img/STPRQuest/STPRQuest4.jpg",
+                        "img/STPRQuest/STPRQuest5.jpg",
+                        "img/STPRQuest/STPRQuest6.jpg"
+
+                    ],
+                    icons: [
+                        "img/icon/Maya.png",
+                        "img/icon/shogun.png",
+                        "img/icon/unity.png",
+                        "img/icon/substance-painter.png",
+                        "img/icon/Adobe_Photosho.png"
+                    ],
+                    video: "https://www.youtube.com/embed/7NE5zyNjjFA?si=z0AbOpch1Z358U7I&amp;start=510"
+                },
+                //すとぷりHWG
+                {
+                    title: "すとぷり様　すとぷりのHereWeGo!! 背景一部制作/調整",
+                    thumbnail: "img/HereWeGo/HereWeGo.png",
+                    discription: "【製作期間】 <br> 2022年8月<br><br>株式会社STPR在籍中の製作物です。<br>スタジオ用CADデータをリアルタイム用にリメッシュ<br>UVからテクスチャベイク等行い、ライティングまで担当いたしました。",
+                    modalImages: [
+                        "img/HereWeGo/HereWeGo2.jpg",
+                        "img/HereWeGo/HereWeGo3.jpg",
+                        "img/HereWeGo/HereWeGo4.jpg",
+                        "img/HereWeGo/HereWeGo5.png",
+                        "img/HereWeGo/HereWeGo6.png",
+                        "img/HereWeGo/HereWeGo7.png",
+
+
+                    ],
+                    icons: [
+                        "img/icon/Maya.png",
+                        "img/icon/shogun.png",
+                        "img/icon/unity.png",
+                        "img/icon/substance-painter.png",
+                        "img/icon/Adobe_Photosho.png"
+                    ],
+                    video: "https://www.youtube.com/embed/PIAgPNR5ENU?si=7lGNldr7K9bIm4My"
+                },
+                //神薔薇あむ
+                {
+                    title: "神薔薇あむ様　3Dキャラクターモデル制作",
+                    thumbnail: "img/KamibaraAmu/KamibaraAmu.png",
+                    discription: "【製作期間】 <br> 2022年3月<br><br>Vtuberとしてご活躍されている神薔薇あむ様よりご依頼を頂き、<br>フルスクラッチで3Dモデルを製作させていただきました。",
+                    modalImages: [
+                        "img/KamibaraAmu/KamibaraAmu1.png",
+                        "img/KamibaraAmu/KamibaraAmu2.png",
+                        "img/KamibaraAmu/KamibaraAmu3.png",
+                        "img/KamibaraAmu/KamibaraAmu4.png",
+                        "img/KamibaraAmu/KamibaraAmu5.png"
+
+
+                    ],
+                    icons: [
+                        "img/icon/Maya.png",
+                        "img/icon/unity.png",
+                        "img/icon/substance-painter.png",
+                        "img/icon/Adobe_Photosho.png"
+                    ],
+                    video: ""
+                },
+                //Hollow
+                {
+                    title: "higma＆gaburyu - ホロウ 背景一部制作",
+                    thumbnail: "img/Hollow/Hollow.png",
+                    discription: "【製作期間】 <br> 2021年12月<br><br>株式会社Balus在籍中の製作物です。<br>実際に製作したジオラマを元にCGで再現いたしました。",
+                    modalImages: [
+                        "img/Hollow/Hollow1.png",
+                        "img/Hollow/Hollow2.png",
+                        "img/Hollow/Hollow3.png",
+                        "img/Hollow/Hollow4.png",
+                        "img/Hollow/Hollow5.png",
+
+
+                    ],
+                    icons: [
+                        "img/icon/Maya.png",
+                        "img/icon/shogun.png",
+                        "img/icon/unity.png",
+                        "img/icon/substance-painter.png",
+                        "img/icon/Adobe_Photosho.png"
+                    ],
+                    video: "https://www.youtube.com/embed/iTKM_3mdBsM?si=bGMc6Hu26nwjL1IY"
+                },
+                //Beast
+                {
+                    title: "天開司様 Beast 3D背景製作/デザイン",
+                    thumbnail: "img/Beast/Beast.png",
+                    discription: "製作期間】 <br> 2021年9月<br><br>株式会社Balus在籍中の製作物です。<br>電車シーンはフルスクラッチ、他シーンは一部アセットを使用しております。",
+                    modalImages: [
+                        "img/Beast/Beast1.png",
+                        "img/Beast/Beast2.jpg",
+                        "img/Beast/Beast3.jpg",
+                        "img/Beast/Beast4.jpg",
+                        "img/Beast/Beast5.jpg",
+                        "img/Beast/Beast6.jpg"
+                    ],
+                    icons: [
+                        "img/icon/Maya.png",
+                        "img/icon/shogun.png",
+                        "img/icon/unity.png",
+                        "img/icon/substance-painter.png",
+                        "img/icon/Adobe_Photosho.png"
+                    ],
+                    video: "https://www.youtube.com/embed/3rQuoLY9BTI?si=HpudxufkVp5qQS9y"
+                },
+                //ugeChanmarch
+                {
+                    title: "杏戸ゆげ様 UGE CHAN MARCH 3Dプロップ製作",
+                    thumbnail: "img/uge chan march/uge chan march.png",
+                    discription: "製作期間】 <br> 2021年9月<br><br>株式会社Balus在籍中の製作物です。<br>実写合成のためプロップをCGで再現、空中に浮かびテレビに吸い込まれるアニメーションを製作いたしました。",
+                    modalImages: [
+                        "img/uge chan march/uge chan march1.jpg",
+                        "img/uge chan march/uge chan march2.jpg",
+                        "img/uge chan march/uge chan march3.png",
+                        "img/uge chan march/uge chan march4.png",
+                        "img/uge chan march/uge chan march5.png",
+                        "img/uge chan march/uge chan march6.png",
+                        "img/uge chan march/uge chan march7.jpg",
+                        "img/uge chan march/uge chan march8.png",
+                        "img/uge chan march/uge chan march9.png",
+                        "img/uge chan march/uge chan march10.gif",
+                    ],
+                    icons: [
+                        "img/icon/Maya.png",
+                        "img/icon/shogun.png",
+                        "img/icon/unity.png",
+                        "img/icon/substance-painter.png",
+                        "img/icon/Adobe_Photosho.png"
+                    ],
+                    video: "https://www.youtube.com/embed/tgPK9TH76vE?si=yv3s8qFFuQYsymKo"
+                },
+                //シュガリリ2
+                {
+                    title: "SugarLylic様2ndMistery ライブ3D背景製作/デザイン",
+                    thumbnail: "img/SL/SL.png",
+                    discription: "製作期間】 <br> 2021年8月<br><br>株式会社Balus在籍中の製作物です。<br>室内シーンは一部アセットを使用しております。<br>ライブ会場である双子玉川駅前をCGで再現いたしました。<br>一部演出のためシェーダーを開発いたしました。",
+                    modalImages: [
+                        "img/SL/SL1.jpg",
+                        "img/SL/SL2.jpg",
+                        "img/SL/SL3.jpg",
+                        "img/SL/SL4.jpg",
+                        "img/SL/SL5.jpg",
+                        "img/SL/SL6.jpg",
+                        "img/SL/SL7.jpg",
+                        "img/SL/SL8.jpg",
+                        "img/SL/SL9.gif"
+                    ],
+                    icons: [
+                        "img/icon/Maya.png",
+                        "img/icon/shogun.png",
+                        "img/icon/unity.png",
+                        "img/icon/substance-painter.png",
+                        "img/icon/Adobe_Photosho.png"
+                    ],
+                    video: "https://www.youtube.com/embed/8gVN75emRWU?si=vm1MgOU15ixF7V-k"
+                },
+                //Alice3
+                {
+                    title: "銀河アリス様 3周年ライブ Message ライブ3D背景製作/デザイン",
+                    thumbnail: "img/Alice3rd/Alice3rd.png",
+                    discription: "製作期間】 <br> 2021年5月<br><br>株式会社Balus在籍中の製作物です。<br>デザイン～製作、ライティングまで一貫して担当いたしました。",
+                    modalImages: [
+                        "img/Alice3rd/Alice3rd1.jfif",
+                        "img/Alice3rd/Alice3rd2.jfif",
+                        "img/Alice3rd/Alice3rd3.png",
+                        "img/Alice3rd/Alice3rd4.jfif",
+                        "img/Alice3rd/Alice3rd5.jfif",
+                        "img/Alice3rd/Alice3rd6.jpg",
+                        "img/Alice3rd/Alice3rd7.png"
+
+                    ],
+                    icons: [
+                        "img/icon/Maya.png",
+                        "img/icon/shogun.png",
+                        "img/icon/unity.png",
+                        "img/icon/substance-painter.png",
+                        "img/icon/Adobe_Photosho.png"
+                    ],
+                    video: "https://www.youtube.com/embed/9qn9xvYypjU?si=M85ZfMItHMYRIMRD&amp;start=965" 
+                },
+                //Alice通常収録
+                {
+                    title: "銀河アリス様 通常収録 3D背景製作/デザイン",
+                    thumbnail: "img/AliceRecStudio/Alice_RecStudio.png",
+                    discription: "製作期間】 <br> 2021年5月<br><br>株式会社Balus在籍中の製作物です。<br>デザイン～製作、ライティングまで一貫して担当いたしました。",
+                    modalImages: [
+                        "img/AliceRecStudio/Alice_RecStudio1.jpg",
+                        "img/AliceRecStudio/Alice_RecStudio2.jpg",
+                        "img/AliceRecStudio/Alice_RecStudio3.jpg",
+                        "img/AliceRecStudio/Alice_RecStudio4.jpg",
+                        "img/AliceRecStudio/Alice_RecStudio5.jpg"
+
+                    ],
+                    icons: [
+                        "img/icon/Maya.png",
+                        "img/icon/shogun.png",
+                        "img/icon/unity.png",
+                        "img/icon/substance-painter.png",
+                        "img/icon/Adobe_Photosho.png"
+                    ],
+                    video: "https://www.youtube.com/embed/0GiJhweM_aU?si=SlamphrTup35LCzg" 
+                },
+                //シャルロット生誕
+                {
+                    title: "島村シャルロット様 誕生日ライブ サブキャラクター製作",
+                    thumbnail: "img/ShimamuraCharlotteBirthday/ShimamuraCharlotteBirthday.png",
+                    discription: "製作期間】 <br> 2021年4月<br><br>株式会社Balus在籍中の製作物です。<br>サブキャラクターのデザイン画を元に3D製作いたしました。",
+                    modalImages: [
+                        "img/ShimamuraCharlotteBirthday/ShimamuraCharlotteBirthday2.png",
+                        "img/ShimamuraCharlotteBirthday/ShimamuraCharlotteBirthday3.jpg",
+                        "img/ShimamuraCharlotteBirthday/ShimamuraCharlotteBirthday4.jpg",
+                        "img/ShimamuraCharlotteBirthday/ShimamuraCharlotteBirthday5.jpg",
+                    ],
+                    icons: [
+                        "img/icon/Maya.png",
+                        "img/icon/shogun.png",
+                        "img/icon/unity.png",
+                        "img/icon/substance-painter.png",
+                        "img/icon/Adobe_Photosho.png"
+                    ],
+                    video: "https://www.youtube.com/embed/xD1hSTFhPFc?si=hzApXOsPgXjmzY5p"
+                },
+                //Tubeout
+                {
+                    title: "Tubeout8,9,Fesステージデザイン/製作",
+                    thumbnail: "img/TO/TO.png",
+                    discription: "製作期間】 <br> 2021年7月<br><br>株式会社Balus在籍中の製作物です。<br>デザイン～製作、ライティングまで一貫して担当いたしました。",
+                    modalImages: [
+                        "img/TO/TO1.avif",
+                        "img/TO/TO2.avif",
+                        "img/TO/TO3.png",
+                        "img/TO/TO4.jpg",
+                        "img/TO/TO5.jpg",
+                        "img/TO/TO6.png",
+                        
+                        
+                        "img/TO/TO9.png",
+                        "img/TO/TO10.png",
+                        "img/TO/TO11.png",
+                        "img/TO/TO12.jpg",
+                        "img/TO/TO13.gif",
+                    ],
+                    icons: [
+                        "img/icon/Maya.png",
+                        "img/icon/shogun.png",
+                        "img/icon/unity.png",
+                        "img/icon/substance-painter.png",
+                        "img/icon/Adobe_Photosho.png"
+                    ],
+                    video: "https://www.youtube.com/embed/fuq5iLg_n7o?si=BdCdnWnWXaVGiwLf"
+                }
+
+            ];

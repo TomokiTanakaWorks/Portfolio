@@ -1,0 +1,31 @@
+name: Build optimized portfolio images
+on:
+  push:
+    branches: [main, "redesign/modern-portfolio-2026"]
+    paths-ignore: ["assets/optimized/**"]
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  generate-webp:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install Pillow
+        run: python -m pip install 'Pillow>=11,<13'
+      - name: Optimize original images
+        run: python scripts/optimize_images.py
+      - name: Commit generated previews
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add assets/optimized/
+          if ! git diff --cached --quiet; then
+            git commit -m 'perf: add optimized WebP preview images [skip ci]'
+            git push
+          fi
