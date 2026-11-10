@@ -493,11 +493,11 @@ window.portfolioProjects = [
                         "img/TO/TO1.avif",
                         "img/TO/TO2.avif",
                         "img/TO/TO3.png",
-                        "img/TO/TO4.png",
-                        "img/TO/TO5.png",
+                        "img/TO/TO4.jpg",
+                        "img/TO/TO5.jpg",
                         "img/TO/TO6.png",
-                        "img/TO/TO7.png",
-                        "img/TO/TO8.png",
+                        
+                        
                         "img/TO/TO9.png",
                         "img/TO/TO10.png",
                         "img/TO/TO11.png",
